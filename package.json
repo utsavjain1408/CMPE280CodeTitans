@@ -1,0 +1,27 @@
+{
+  "name": "titanpizzas",
+  "version": "1.0.0",
+  "description": "This is an amazing app for ordering delicious pizzas!! Believe it!",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/utsavjain1408/CMPE280CodeTitans.git"
+  },
+  "keywords": [
+    "Titan",
+    "Pizza"
+  ],
+  "author": "CodeTitans",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/utsavjain1408/CMPE280CodeTitans/issues"
+  },
+  "homepage": "https://github.com/utsavjain1408/CMPE280CodeTitans#readme",
+  "dependencies": {
+    "body-parser": "^1.18.2",
+    "express": "^4.16.2"
+  }
+}
