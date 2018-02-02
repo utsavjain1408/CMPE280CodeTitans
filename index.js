@@ -11,7 +11,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.listen(PORT, () =>{
     console.log(`Titan Pizza Server is now serving at ${PORT}`)
 })
-routes(app);
+routes.route(app);
 
 app.use('/home',(req,res) =>{
         res.sendFile('\\src\\view\\login.html',{"root": __dirname})

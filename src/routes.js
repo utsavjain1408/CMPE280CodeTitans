@@ -15,11 +15,17 @@ export const routes = (app) => {
     }*/
     'use strict';
 
-    var _controllers = require('./controllers/controllers');
-    exports.routes = function routes(app) {
-        app.routes('/').post(login);
-        app.routes('/signup').post(createAccout);
-        app.routes('/:user').get(function (req, res) {
+   
+    module.exports.route = function route(app) {
+        var controllers = require('./controllers/controllers');
+        app.post('/',controllers.login)
+        app.get('/', (req, res) => {
+            res.sendFile('\\view\\login.html',{"root": __dirname})
+        })
+        app.post('/signup', controllers.createAccout);
+        app.get('/signup', function (req, res) {
             console.log('Under Construction!!');
+            res.sendFile('\\view\\signup.html',{"root": __dirname})
+
         });
     };
