@@ -13,10 +13,6 @@ app.listen(PORT, () =>{
 })
 routes(app);
 
-app.get('/', (req, res)=>{
-    res.send(`CODE TITAS FOR THE WIN!!`)
-})
-
 app.use('/home',(req,res) =>{
         res.sendFile('\\src\\view\\login.html',{"root": __dirname})
 })
