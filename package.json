@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start":"nodemon index.js"
+    "start": "forever index.js"
   },
   "repository": {
     "type": "git",
@@ -26,6 +26,7 @@
     "express": "^4.16.2"
   },
   "devDependencies": {
+    "forever": "^0.15.3",
     "nodemon": "^1.14.12"
   }
 }
