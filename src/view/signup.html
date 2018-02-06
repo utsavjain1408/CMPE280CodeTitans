@@ -7,7 +7,7 @@
 			height: 100%;
             margin: 0;
             padding: 0;
-			background-image: url('https://cdn.pixabay.com/photo/2017/12/09/08/18/background-3007395_1280.jpg');
+			background-image: url("PizzaBackground.jpg");
             background-size:100% 100%;
             background-repeat: no-repeat;
 			opacity: 1;
@@ -20,6 +20,11 @@
 		}
 	
 </style>
+<script>
+    function myFunction() {
+        alert("Sorry, the site underconstruction! Please try SignUp!");
+    }
+    </script>
 <body>
 
 	<!-- <h2>Register</h2> -->
@@ -77,8 +82,8 @@
 			
 			<p>
 
-				<label for="password" >Confirm Password:</label>
-				<input id="password" name="password" type="password" placeholder="Confirm password" required>
+				<label for="cpassword" >Confirm Password:</label>
+				<input id="cpassword" name="password" type="password" placeholder="Confirm password" required>
 			</p>
 			<p>
 				<fieldset>
@@ -97,7 +102,7 @@
 			<input id = "agreed" name = "agreed" type = "checkbox">
 			</p>
 
-			<input type = "submit">
+			<input type = "submit" onclick="myFunction()">
 			</form>
 	</fieldset>
 </body>
