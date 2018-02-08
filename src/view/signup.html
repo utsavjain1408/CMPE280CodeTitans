@@ -1,3 +1,5 @@
+<!DOCTYPE html>
+
 <html>
 <head>
 	<title>Register</title>
@@ -7,17 +9,21 @@
 			height: 100%;
             margin: 0;
             padding: 0;
-			background-image: url('https://static.pexels.com/photos/162918/pizza-cheese-margarita-homemade-162918.jpeg');
-            background-size:100% 100%;
-            background-repeat: no-repeat;
-			opacity: 1;
-		}
+					}
 	h1, legend  {
 			color: blue;
 		}
 	p, label    {
 			color: wheat;
 		}
+	.back{
+		background-image: url('https://static.pexels.com/photos/162918/pizza-cheese-margarita-homemade-162918.jpeg');
+        background-size:100% 100%;
+        background-repeat: no-repeat;
+	}
+	div{
+		opacity: 1;
+	}
 	
 </style>
 <script>
@@ -28,7 +34,7 @@
 <body>
 
 	<!-- <h2>Register</h2> -->
-
+<div class="back">
 	<form>
 		<fieldset>
 			<legend>Register</legend> 
@@ -105,5 +111,6 @@
 			<input type = "submit" onclick="myFunction()">
 			</form>
 	</fieldset>
+</div>
 </body>
 </html>
