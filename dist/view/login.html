@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+    <title>Titan Pizza</title>
+    <head> </head>
+    <style>
+	body {	
+			height: 100%;
+            margin: 0;
+            padding: 0;
+			background-image: url('https://static.pexels.com/photos/162918/pizza-cheese-margarita-homemade-162918.jpeg');
+            background-size:100%;
+            background-repeat: no-repeat;
+			opacity: 1;
+		}
+	h1, legend  {
+			color: blue;
+		}
+	p, label    {
+			color: rgb(235, 235, 50);
+		}
+	a {
+        color: greenyellow;
+    }
+    
+</style>
+<script>
+    function myFunction() {
+        alert("Sorry, the site underconstruction! Please try SignUp!");
+    }
+    </script>
+<body>
+        <h1>Welcome to Pizza Titans </h1>
+
+        <form action="textfields"
+          method="post">
+        <fieldset>
+            <legend>User input</legend>
+            <p>
+                <label>Email : </label>
+                <input name="email" type="text" placeholder="Enter Registered Email" required/>
+            </p>
+            <p>
+                <label>Password : </label>
+                <input name="password" type="password" placeholder="Enter your password" required/ >
+            </p>
+            
+            <p>
+                <input type="submit" value="Submit" onclick="myFunction()" />
+                <input type="button" value="Forgot Password" onclick="myFunction()">
+            </p>
+            <p>
+                Don't have  an account! No worries, just
+                <a href='/signup'>Sign Up!</a>
+            </p>
+        </fieldset>
+    </form>
+    </body>
+</html>

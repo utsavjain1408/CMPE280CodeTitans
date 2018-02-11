@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+	<title>Register</title>
+</head>
+<style>
+	body {	
+			height: 100%;
+            margin: 0;
+            padding: 0;
+					}
+	h1, legend  {
+			color: blue;
+		}
+	p, label    {
+			color: wheat;
+		}
+	.back{
+		background-image: url('https://static.pexels.com/photos/162918/pizza-cheese-margarita-homemade-162918.jpeg');
+        background-size:100% 100%;
+        background-repeat: no-repeat;
+	}
+	div{
+		opacity: 1;
+	}
+	
+</style>
+<script>
+    function myFunction() {
+        alert("Sorry, the site underconstruction! Please try SignUp!");
+	}
+	function later(){
+		alert("Sorry, the site underconstruction! Please try again later!");
+	}
+    </script>
+<body>
+
+	<!-- <h2>Register</h2> -->
+<div class="back">
+	<form>
+		<fieldset>
+			<legend>Register</legend> 
+			<p>
+			<label for="fisrt">FirstName : </label>
+			<input name="first" type="text" id="first" placeholder="Enter your firstname here" required>
+			</p>
+
+			<p>
+			<label for="last">Last Name :</label>
+			<input name="last" type="text" id="last" placeholder="Enter your lastname here" required>
+			</p>
+
+			<p>
+				<label for="email">Email :</label>
+				<input id="email" name ="email" type="email" placeholder="Enter your email here"  vrequired>
+			</p>
+			
+			<p>
+				<label for="address line1"> Address Line 1 :</label>
+				<input name="address" type="text"  placeholder="Street Addresss">
+			</p>
+
+			<p>
+				<label for="address line2"> Address Line 2 :</label>
+				<input name="address" type="text" placeholder="Apartment Number">
+			</p>
+
+			<p>
+				<label for="city"> City :</label>
+				<input name="city" type="text" placeholder="Enter City">
+			</p>
+
+			<p>
+				<label for="state"> State :</label>
+				<input name="state" type="text" placeholder="Enter State">
+			</p>
+
+			<p>
+				<label for="zip"> Zip :</label>
+				<input name="zip" type="text" placeholder="Enter Zip">
+			</p>
+
+		
+
+			<p>
+
+				<label for="password" >Choose Password:</label>
+				<input id="password" name="password" type="password" placeholder="Enter your password" required>
+			</p>
+			
+			<p>
+
+				<label for="cpassword" >Confirm Password:</label>
+				<input id="cpassword" name="password" type="password" placeholder="Confirm password" required>
+			</p>
+			<p>
+				<fieldset>
+					<legend>Select Gender</legend>
+					<label for = "male">Male </label>
+			    	<input id = "male" name = "gender" type = "radio" value = "male" checked>
+				    <label for = "female">Female </label>	
+				    <input id = "female" name = "gender" type = "radio" value = "female">
+				    <label for = "other">Other </label>
+				    <input id = "other" name = "gender" type = "radio" value = "other">
+				</fieldset>
+			</p>
+
+			<p>
+			<label for = "agreed"> I agree to the term and conditions</label>
+			<input id = "agreed" name = "agreed" type = "checkbox">
+			</p>
+
+			<input type = "submit" onclick="later()">
+			</form>
+	</fieldset>
+</div>
+</body>
+</html>
