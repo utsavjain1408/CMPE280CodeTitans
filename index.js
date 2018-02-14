@@ -1,8 +1,8 @@
 var express = require('express')
 var bodyParser = require('body-parser')
-var login = require('./src/controllers/controllers')
-var routes = require('./src/routes')
-const PORT = 3051
+var login = require('./dist/controllers/controllers')
+var routes = require('./dist/routes')
+const PORT = 3050
 
 var app = express()
 

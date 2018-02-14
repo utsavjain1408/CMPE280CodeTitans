@@ -1,8 +1,8 @@
-/*import {
+import {
     createAccout,
     login
 } from './controllers/controllers'
-
+/*
 export const routes = (app) => {
     app.routes('/')
         .post(login)
