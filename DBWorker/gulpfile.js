@@ -29,7 +29,7 @@ gulp.task('copyhtml', (done)=>{
 })
 
 //Convert to es5 using babel
-gulp.task('babelControllers', (done)=>{
+*/gulp.task('babelControllers', (done)=>{
     console.log(`Running babel to convert es5 to es6`)
     gulp.src('src/controllers/*.js')
         .pipe(babel())
@@ -45,23 +45,35 @@ gulp.task('babelModels', (done)=>{
 })
 gulp.task('babelRoutes', (done)=>{
     console.log(`Running babel to convert es5 to es6`)
-    gulp.src('src/*.js')
+    gulp.src('src/routes/*.js')
         .pipe(babel())
-        .pipe(gulp.dest('dist'))
+        .pipe(gulp.dest('dist/routes'))
     done()
 })
 
-//minifing the js files
+gulp.task('babelindex', (done)=>{
+    console.log(`Running babel to convert es5 to es6`)
+    gulp.src('index.js')
+        .pipe(babel())
+        .pipe(gulp.dest('index2.js'))
+    done()
+})
+/*//minifing the js files
 gulp.task('minify', (done1)=>{
     console.log(`Minifing the js code using Uglify`)
     gulp.src('dist/*.js')
         .pipe(minify())
         .pipe(gulp.dest('dist'))
     done1()
-});
-*/
+});*/
 //Default Task
-//gulp.task('doall', gulp.series('copyhtml','message','babelControllers','babelRoutes','babelModels','message','minify'));
+gulp.task('doall', gulp.series(
+    'message',
+    'babelControllers',
+    'babelRoutes',
+    'babelModels',
+    'babelindex'
+));
 
 gulp.task('default', (done)=>{
     console.log(`This is default gulp`)
