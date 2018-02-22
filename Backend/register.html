@@ -21,7 +21,7 @@
 			</div>
 	 		<div id="Email">		
 				<label for ="Email">Email  &emsp;&emsp;&emsp;&ensp;</label>
-				<input  type="email" placeholder="Enter Email *" required >
+				<input  type="email" placeholder="Enter Email *"  pattern="^.+@.+\..{2,4}$" required title="xxxxx@xxxx.xxx">
 			</div>
 
 			<div id="Password">
@@ -42,11 +42,11 @@
 		</div>
 
 		<h3>Location</h3>
-		<div>
+		<div class="location">
 			<input type="text" placeholder="123 Main St.">
 			<input type="text" placeholder="Apt /St/ Floor">
 		</div>
-		<div>
+		<div class="location">
 			<input type="text" placeholder="City">
 			<input type="text" placeholder="State">
 			<input type="text" placeholder="Enter Zip Code">
