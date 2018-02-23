@@ -23,7 +23,7 @@ const TitanUserSchema = new mongoose.Schema({
     state: String,
     zip: Number
     },
-    password:{
+  password:{
         type:String,
         required:'Bro, Password is needed.'
     }

@@ -1,7 +1,7 @@
 import mongoose from 'mongoose';
-//import TitanOrderSchema from '../models/orders'; 
+import TitanOrderSchema from '../models/orders'; 
 
-//const user = mongoose.model('OrderModel', TitanOrderSchema)
+const user = mongoose.model('OrderModel', TitanOrderSchema)
 
 export const getAllOrders = (req,res) =>{
     res.json("getAllOrders");

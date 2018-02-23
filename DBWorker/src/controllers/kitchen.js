@@ -1,7 +1,7 @@
 import mongoose from 'mongoose';
-//import TitanKitchenSchema from '../models/kitchen'; 
+import TitanKitchenSchema from '../models/kitchen'; 
 
-//const user = mongoose.model('KitchenModel', TitanKitchenSchema)
+const user = mongoose.model('KitchenModel', TitanKitchenSchema)
 
 export const getKitchenByID = (req,res) =>{
     

@@ -1,6 +1,6 @@
 import mongoose from 'mongoose';
 
-const TitanOrderSchema = new mongoose.Schema({
+export const TitanOrderSchema = new mongoose.Schema({
   UserUID:{
     type:String,
     required: 'Unique Id Required',
@@ -27,7 +27,7 @@ const TitanOrderSchema = new mongoose.Schema({
                 type: String
             }],
             size:{
-                tyoe:String,
+                type:String,
                 enum:['medium', 'large', 'titan'],
                 default:'mediium'
             },
@@ -51,6 +51,5 @@ const TitanOrderSchema = new mongoose.Schema({
       default:'placed'
   }
 });
-
 
 export default TitanOrderSchema
