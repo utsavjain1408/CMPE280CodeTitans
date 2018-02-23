@@ -23,7 +23,7 @@ const TitanKitchenSchema = new mongoose.Schema({
     state: String,
     zip: Number
     },
-    zipsServed:[{
+  zipsServed:[{
             type: String
     }],
     Password:{

@@ -1,5 +1,6 @@
 import mongoose from 'mongoose';
 import TitanOrderSchema from '../models/orders'; 
+import uuid4 from 'uuid/v4'
 
 const user = mongoose.model('OrderModel', TitanOrderSchema)
 

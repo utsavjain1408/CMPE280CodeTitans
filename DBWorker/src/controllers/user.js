@@ -1,12 +1,13 @@
 import mongoose from 'mongoose';
 import TitanUserSchema from '../models/user'; 
-
+import uuid4 from 'uuid/v4'
 const user = mongoose.model('UserModel', TitanUserSchema)
 
 
 export const createNewUser = (req,res) =>{
     console.log(`createNewUser called`)
     let newUser = new user(req.body);
+    newUser.UUID = uuid4(req.body)
     newUser.save((err, user) => {
     if(err){
       res.send(err);
@@ -53,5 +54,5 @@ export const getAllUsers = (req,res) =>{
         }
         console.log(user);
         res.json(user);
-       });
+    });
 }
