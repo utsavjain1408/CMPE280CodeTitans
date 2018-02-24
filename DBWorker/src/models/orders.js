@@ -1,7 +1,7 @@
 import mongoose from 'mongoose';
 
 export const TitanOrderSchema = new mongoose.Schema({
-  UserUID:{
+  orderUID:{
     type:String,
     required: 'Unique Id Required',
     default: Date.now
@@ -10,6 +10,10 @@ export const TitanOrderSchema = new mongoose.Schema({
         type:String,
         required: 'Unique Id Required',
         default: Date.now
+  },
+  userID:{
+      type:String,
+      required:'Bro Phantom order will not be served.'
   },
   order:{
         items:{
