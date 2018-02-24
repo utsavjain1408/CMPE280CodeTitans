@@ -12,16 +12,80 @@
             background-repeat: no-repeat;
 			opacity: 1;
 		}
-	h1, legend  {
-			color: blue;
+	h1  {
+			color: rgba(6, 20, 83, 0.884);
 		}
+
+ legend {
+                color:black
+                font-size: 18px;
+    }
 	p, label    {
-			color: rgb(235, 235, 50);
+			color: rgb(10, 10, 10);
 		}
 	a {
-        color: greenyellow;
+        color: rgb(255, 230, 8);
+        font-weight: 600;
+        font-size: 18px;
     }
     
+    .login{
+	align-content: center
+	top: calc(50% - 75px);
+	left: calc(50% - 50px);
+	height: 800px;
+	width: 600px;
+	padding: 10px;
+	z-index: 2;
+	
+}
+
+.login input[type=text]{
+    width: 250px;
+    height: 20px;
+    /* background: transparent; */
+    border: 1px solid rgba(15, 15, 15, 0.6);
+    border-radius: 2px;
+    color: #fff;
+    font-family: 'Exo', sans-serif;
+    font-size: 12px;
+    font-weight: 400;
+    padding: 4px;
+}
+
+.login input[type=password]{
+	width: 250px;
+	height: 20px;
+	/*background: transparent;*/
+	border: 1px solid rgba(15,15,15,0.6);
+	border-radius: 2px;
+	color: #fff;
+	font-family: 'Exo', sans-serif;
+	font-size: 12px;
+	font-weight: 400;
+	padding: 4px;
+	margin-top: 10px;
+}
+
+
+
+.login p{ 
+	color : rgb(255, 230, 8);
+    font-weight: 600;
+    font-size: 18px;
+    
+    
+}
+
+.login input[type=text]:focus{
+	outline: none;
+	border: 1px solid rgba(12, 0, 0, 0.925);
+}
+
+
+
+
+}
 </style>
 <script>
     function myFunction() {
@@ -30,11 +94,11 @@
     </script>
 <body>
         <h1>Welcome to Pizza Titans </h1>
-
+<div class="login">
         <form action="textfields"
           method="post">
         <fieldset>
-            <legend>User input</legend>
+            <legend>Account Login</legend>
             <p>
                 <label>Email : </label>
                 <input name="email" type="text" placeholder="Enter Registered Email" required/>
@@ -54,5 +118,6 @@
             </p>
         </fieldset>
     </form>
+</div>
     </body>
 </html>
