@@ -1,0 +1,20 @@
+doctype html
+html
+    head
+        title   #{title}
+    body
+        div
+            a(href = 'http://localhost:3050') 
+                img(src=('http://localhost:3050/static/pizzaLogo.png'))
+                h1 Titan Pizza            
+        br
+        br
+        block content
+        br
+        br
+        footer  
+            p Copyright Info: We don't own ANY  copyrights 😅
+            p 
+                a(href = 'http://localhost:3050/about') About Us
+            p 
+                a(href = 'http://localhost:3050/career') Career

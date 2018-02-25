@@ -4,7 +4,7 @@
   "description": "This is an amazing app for ordering delicious pizzas!! Believe it!",
   "main": "index.js",
   "scripts": {
-    "test": "nodemon index.js",
+    "test": "nodemon ./index.js --exec babel-node -e js",
     "start": "node index.js",
     "publish": "forever start index.js",
     "stop": "forever stop index.js"
@@ -26,10 +26,11 @@
   "dependencies": {
     "body-parser": "^1.18.2",
     "express": "^4.16.2",
-    "mongoose": "^5.0.4"
+    "mongoose": "^5.0.4",
+    "pug": "^2.0.0-rc.4"
   },
   "devDependencies": {
-    "babel": "^6.23.0",
+    "babel-cli": "^6.26.0",
     "babel-core": "^6.26.0",
     "babel-preset-es2015": "^6.24.1",
     "babel-register": "^6.26.0",
