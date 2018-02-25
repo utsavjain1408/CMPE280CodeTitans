@@ -7,11 +7,33 @@ input {
     background: #f1f1f1; 
     margin: 5px 0px 15px 0px;
 }
-body{
-   /* background-color: grey; 
-    background-repeat: no-repeat; */
-    
+/*body:before {
+  content: "";
+  position: fixed;
+  left: 0;
+  right: 0;
+  z-index: -1;
+  
+  display: block;
+  background-image: url("homepizza.jpeg");
+  width: 1200px;
+  height: 800px;
+  
+  -webkit-filter: blur(10px);
+  -moz-filter: blur(5px);
+  -o-filter: blur(5px);
+  -ms-filter: blur(5px);
+  filter: blur(5px);
 }
+
+body{
+  position: fixed;
+  left: 0;
+  right: 0;
+  z-index: 0;
+  margin-left: 20px;
+  margin-right: 20px;
+}*/
 
 h1 , h2{
     color: #4CAF50;
@@ -36,6 +58,7 @@ button{
     float:right;
     width:50%;
  }
+ 
 
 label{
     text-align: right;
