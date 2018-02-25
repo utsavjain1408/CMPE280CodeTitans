@@ -1,0 +1,81 @@
+/* Style inputs with type, select elements and textareas */
+input {
+    width: 60%;
+    padding: 12px; /* Some padding */  
+    border: 1px solid #ccc; /* Gray border */
+    border-radius: 4px; /* Rounded borders */
+    background: #f1f1f1; 
+    margin: 5px 0px 15px 0px;
+}
+/*body:before {
+  content: "";
+  position: fixed;
+  left: 0;
+  right: 0;
+  z-index: -1;
+  
+  display: block;
+  background-image: url("homepizza.jpeg");
+  width: 1200px;
+  height: 800px;
+  
+  -webkit-filter: blur(10px);
+  -moz-filter: blur(5px);
+  -o-filter: blur(5px);
+  -ms-filter: blur(5px);
+  filter: blur(5px);
+}
+
+body{
+  position: fixed;
+  left: 0;
+  right: 0;
+  z-index: 0;
+  margin-left: 20px;
+  margin-right: 20px;
+}*/
+
+h1 , h2{
+    color: #4CAF50;
+}
+button{
+    background-color: #4CAF50; /* Green */
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+}
+
+.left{
+    
+    float: left;
+    width:50%;
+}
+.right{
+    float:right;
+    width:50%;
+ }
+ 
+
+label{
+    text-align: right;
+    font-weight: bold;
+}
+
+fieldset
+{
+    max-width: 70%;
+    
+    border-color: white;
+}
+
+/*.SignUp
+{
+    padding: 15px 20px 15px 20px;
+    border: 1px solid #EFF3F6;
+    margin-bottom: 20px;
+}*/
+
