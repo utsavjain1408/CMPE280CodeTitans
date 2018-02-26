@@ -1,0 +1,15 @@
+extends layout
+
+block content
+    div(class="sidenav")
+        a(href='http://localhost:3050/home') Home
+        a(href='http://localhost:3050/profile') Profile
+        a(href='http://localhost:3050/pastOrder') Past Order
+        a(href='http://localhost:3050/contactUs') Contact Us
+    style
+            include signup.css
+            //include layout.css
+    div(class="main") 
+        p
+            h2 We don't have a Database right now .. So.. Please be patient to view your proflie
+            img(src=('http://localhost:3050/static/welcome.gif'))

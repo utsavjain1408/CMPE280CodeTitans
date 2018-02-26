@@ -48,7 +48,33 @@ export const routes = (app) => {
         app.post('/signup', controllers.createAccout);
         app.get('/signup', function (req, res) {
             console.log('Under Construction!!');
-            res.sendFile('/view/signup.html',{"root": __dirname})
-
+            //res.sendFile('/view/signup.html',{"root": __dirname})
+            res.render('signup', {
+                title:'Career at Titan Pizza',
+            })
+        });
+        app.get('/home', function (req, res) {
+            console.log('Under Construction!!');
+            res.render('home', {
+                title:'Welcome to Titan Pizza',
+            })
+        });
+        app.get('/profile', function (req, res) {
+            console.log('Under Construction!!');
+            res.render('profile', {
+                title:'Welcome to Titan Pizza',
+            })
+        });
+        app.get('/pastOrder', function (req, res) {
+            console.log('Under Construction!!');
+            res.render('pastorder', {
+                title:'Welcome to Titan Pizza',
+            })
+        });
+        app.get('/contactUs', function (req, res) {
+            console.log('Under Construction!!');
+            res.render('contact', {
+                title:'Welcome to Titan Pizza',
+            })
         });
     };

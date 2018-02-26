@@ -1,18 +1,25 @@
 doctype html
 html
     head
+        style
+            include layout.css
         title   #{title}
     body
-        div
+        div(class='logo')
             a(href = 'http://localhost:3050') 
-                img(src=('http://localhost:3050/static/pizzaLogo.png'))
-                h1 Titan Pizza            
+                table(class="main")
+                    tr
+                        td
+                            img(src=('http://localhost:3050/static/pizzaLogo.png'))
+                        td
+                            h1 Titan Pizza 
+                           
         br
         br
         block content
         br
         br
-        footer  
+        footer(class="main")  
             p Copyright Info: We don't own ANY  copyrights 😅
             p 
                 a(href = 'http://localhost:3050/about') About Us
