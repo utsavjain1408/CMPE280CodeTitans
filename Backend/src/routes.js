@@ -1,7 +1,4 @@
-import {
-    createAccout,
-    login
-} from './controllers/controllers'
+//import { createAccout,login } from './controllers/controllers'
 var express = require('express')
 var path = require('path')
 

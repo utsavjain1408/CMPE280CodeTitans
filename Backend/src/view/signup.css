@@ -20,6 +20,7 @@ button{
     text-decoration: none;
     display: inline-block;
     font-size: 16px;
+    width:50%;
 }
 .left{
     
@@ -57,7 +58,7 @@ fieldset
     z-index: 1; /* Stay on top */
     top: 0; /* Stay at the top */
     left: 0;
-    background-color: #555; /* Black */
+    background-color: rgb(14, 1, 1); /* Black */
     overflow-x: hidden; /* Disable horizontal scroll */
     padding-top: 20px;
 }
@@ -67,7 +68,7 @@ fieldset
     padding: 6px 8px 6px 16px;
     text-decoration: none;
     font-size: 25px;
-    color: #818181;
+    color: #ffffff;
     display: block;
 }
 
@@ -88,3 +89,9 @@ fieldset
     .sidenav a {font-size: 18px;}
 }
 
+/* Title Div Style class */
+.title {
+    font-size: 20px;
+    padding: 30px;
+    font-family: fantasy;
+}

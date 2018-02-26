@@ -1,14 +1,18 @@
-body {	
+body {
     height: 100%;
+    width: 100%;
+    background-color: #ffe900;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     margin: 0;
     padding: 0;
-    background-color:rgb(184, 117, 117);
-    background-size:100%;
-    background-repeat: no-repeat;
-    opacity: 1;
 }
+
 h1  {
-    color: rgba(6, 20, 83, 0.884);
+    color: rgba(0, 0, 0, 0.884);
     text-shadow: #fff
 }
 
@@ -21,17 +25,13 @@ p, label    {
     text-shadow: #fff;
 }
 a {
-    color: rgb(255, 230, 8);
+    color: rgb(8, 16, 255);
     font-weight: 600;
     font-size: 18px;
 }
 
 .login{
     align-content: center;
-    top: calc(50% - 75px);
-    left: calc(50% - 50px);
-    height: 800px;
-    width: 600px;
     padding: 10px;
     z-index: 2;
 
@@ -64,8 +64,12 @@ a {
     margin-top: 10px;
 }
 
+.login input[type=button]{
+    margin: 10px;
+}
+
 .login p{ 
-    color : rgb(255, 230, 8);
+    color : rgb(8, 16, 255);
     font-weight: 600;
     font-size: 18px;
 
@@ -78,7 +82,8 @@ a {
 }
 
 .logo {
-    align-content: center
+    align-content: center;
+    align-self: center;
 }
 
 /* The sidebar menu */
@@ -110,12 +115,25 @@ a {
 
 /* Style page content */
 .main {
-    margin-left: 160px; /* Same as the width of the sidebar */
-    padding: 0px 10px;
+    display: flex;
+    flex-direction: column;
+    width: 100vh;
+    align-items: center;
 }
 
 /* On smaller screens, where height is less than 450px, change the style of the sidebar (less padding and a smaller font size) */
 @media screen and (max-height: 450px) {
     .sidenav {padding-top: 15px;}
     .sidenav a {font-size: 18px;}
+}
+
+.title {
+    font-size: 20px;
+    padding: 30px;
+    font-family: fantasy;
+}
+
+.header {
+    color: rgba(0, 0, 0, 0.884);
+    text-shadow: #fff 
 }

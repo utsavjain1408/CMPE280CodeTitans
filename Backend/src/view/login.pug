@@ -80,7 +80,7 @@ block content
     h1 Welcome to Pizza Titans 
     .login
       form(action='/home', method='get')
-        fieldset
+        fieldset(class="feildset")
           legend Account Login
           table
             tr
@@ -96,12 +96,13 @@ block content
                     input(name='password', type='password', placeholder='Enter your password', required='')
             tr
                 td
-                    input(type='submit', value='Submit')
+
                 td
+                    input(type='submit', value='Submit')
                     input(type='button', value='Forgot Password', onclick='myFunction()')
             tr
                 td
-                    p
+                    div(class="title")
                         |Don't have an account! No worries, just 
                 td    
                     a(href='/signup') Sign Up!
