@@ -7,9 +7,15 @@ block content
         a(href='http://localhost:3050/profile') Profile
         a(href='http://localhost:3050/pastOrder') Past Orders
         a(href='http://localhost:3050/contactUs') Contact Us
-    style
-            include signup.css
-            //include layout.css
-    div(class="main") 
-        div(class="title") We don't have a Database right now .. So.. Please be patient to view your proflie
-            img(src=('http://localhost:3050/static/Welcome.jpg'))
+
+    div
+        ul
+            li
+                a(href='javascript:') Show Pizzas
+                ol
+                    li
+                        |Cheese : $5
+                    li
+                        |Vegetable : $10
+                    li
+                        |Brooklyn : $6

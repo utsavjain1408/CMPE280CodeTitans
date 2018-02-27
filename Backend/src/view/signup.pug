@@ -22,7 +22,7 @@ block content
             div
             .left
                 label(for='Phone') Phone Number
-                input(name='Phone', type='tel', placeholder='Phone Number *', title='Phone Number (Format: (999)999-9999)', required='')
+                input(name='Phone', type='tel',pattern="[0-9]{10}", placeholder='Phone Number *', title='Phone Number (Format: (999)999-9999)', required='')
             .right
                 label(for='date') Date of Birth
                 input(name='date', type='date', placeholder='Birthday date')
@@ -41,8 +41,9 @@ block content
                 input(type='text', placeholder='State')
             span.right
                 label Zip Code
-                input(type='number', placeholder='Enter Zip Code')
+                input( type="text", placeholder="Enter Zip Code", pattern="[0-9]{5}",  title="Zip code(format : 99999 )", required='')
         br
-        button(type='submit')  Create Account
+        button(type='submit', onclick='ilovepizza()')  Create Account
     
+
         script(type='text/javascript', src='static/signup.js')
