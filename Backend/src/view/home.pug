@@ -7,8 +7,32 @@ block content
         a(href='http://localhost:3050/pastOrder') Past Order
         a(href='http://localhost:3050/contactUs') Contact Us
     style
-            include signup.css
-            //include layout.css
+        include signup.css
+        //include layout.css
     div(class="main") 
         div(class="title") Welcome to CodeTitans!
             img(src=('http://localhost:3050/static/Welcome.jpg'))
+    h3(class="title") Store Location
+    #map
+    style.
+        #map {
+            width: 50%;
+            height: 400px;
+        }
+    script.
+        function initMap() {
+            var myLatLng = {lat: 37.42, lng: -121.95};
+        
+            var map = new google.maps.Map(document.getElementById('map'), {
+            zoom: 14,
+            center: myLatLng
+            });
+        
+            var marker = new google.maps.Marker({
+            position: myLatLng,
+            map: map,
+            title: 'Titan Pizaa'
+            });
+        }
+    
+    script(src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC10bC4QxA4c5Vf8MuAIqFgXADXtAhNMtk&callback=initMap")
