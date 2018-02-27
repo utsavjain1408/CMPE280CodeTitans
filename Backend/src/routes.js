@@ -1,73 +1,74 @@
-//import { createAccout,login } from './controllers/controllers'
 var express = require('express')
 var path = require('path')
-
-//var logo = require('./view/pizzaLogo.png')
-/*
-export const routes = (app) => {
-    app.routes('/')
-        .post(login)
-    app.routes('/signup')
-        .post(createAccout)
-    app.routes('/:user')
-        .get((req,res)=>{
-                console.log(`Under Construction!!`)
-        })
-    }*/
     'use strict';
 
    
     module.exports.route = function route(app) {
         var controllers = require('./controllers/controllers');
         app.post('/',controllers.login)
+        //servers static content
         app.use('/static', express.static(path.join(__dirname, 'view')))
+        
+        //Landing page
         app.get('/', (req, res) => {
             res.render('login', {
                 title:'Welcome To Titan Pizza',
-                //logo: express.static(path.join(__dirname, 'view'))
+               
             })
-            //res.sendFile('/view/login.html',{"root": __dirname})
+     
         })
+
+        //About Titan Pizza
         app.get('/about', (req, res) => {
             res.render('about', {
                 title:'About : Titan Pizza',
-                //logo: express.static(path.join(__dirname, 'view'))
+               
             })
-            //res.sendFile('/view/login.html',{"root": __dirname})
         })
+
+        //Recruitment Info
         app.get('/career', (req, res) => {
             res.render('career', {
                 title:'Career at Titan Pizza',
-                //logo: express.static(path.join(__dirname, 'view'))
+               
             })
-            //res.sendFile('/view/login.html',{"root": __dirname})
         })
+
         app.post('/signup', controllers.createAccout);
+        
+        //Renders SignUP page
         app.get('/signup', function (req, res) {
             console.log('Under Construction!!');
-            //res.sendFile('/view/signup.html',{"root": __dirname})
             res.render('signup', {
                 title:'Career at Titan Pizza',
             })
         });
+
+        //Renders the page the user will land on after login.
         app.get('/home', function (req, res) {
             console.log('Under Construction!!');
             res.render('home', {
                 title:'Welcome to Titan Pizza',
             })
         });
+
+        //Renders the page with User’s Profile
         app.get('/profile', function (req, res) {
             console.log('Under Construction!!');
             res.render('profile', {
                 title:'Welcome to Titan Pizza',
             })
         });
+
+        //Renders the page with user’s past orders
         app.get('/pastOrder', function (req, res) {
             console.log('Under Construction!!');
             res.render('pastorder', {
                 title:'Welcome to Titan Pizza',
             })
         });
+        
+        //Renders the page with information for contacting TitanPizza
         app.get('/contactUs', function (req, res) {
             console.log('Under Construction!!');
             res.render('contact', {
