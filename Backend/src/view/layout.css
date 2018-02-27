@@ -135,3 +135,9 @@ a {
     color: rgba(0, 0, 0, 0.884);
     text-shadow: #fff 
 }
+
+ol{display: none;}
+.drop
+    {
+    display: block;
+    }

@@ -75,4 +75,12 @@ var path = require('path')
                 title:'Welcome to Titan Pizza',
             })
         });
+
+        //Renders the page with information for TitanPizza
+        app.get('/pizza', function (req, res) {
+            console.log('Under Construction!!');
+            res.render('pizza', {
+                title:'Welcome to Titan Pizza',
+            })
+        });
     };

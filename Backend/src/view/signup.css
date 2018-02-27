@@ -95,3 +95,8 @@ fieldset
     padding: 30px;
     font-family: fantasy;
 }
+ol{display: none;}
+.drop
+    {
+    display: block;
+    }

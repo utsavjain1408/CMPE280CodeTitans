@@ -3,6 +3,7 @@ extends layout
 block content
     div(class="sidenav")
         a(href='http://localhost:3050/home') Home
+        a(href='http://localhost:3050/pizza') Pizza options
         a(href='http://localhost:3050/profile') Profile
         a(href='http://localhost:3050/pastOrder') Past Orders
         a(href='http://localhost:3050/contactUs') Contact Us
@@ -12,4 +13,10 @@ block content
     div(class="main") 
         div(class="title") Welcome to CodeTitans!
             br
-            img(src=('http://localhost:3050/static/Welcome.jpg'))
+            img(id = 'myImage', src=('http://localhost:3050/static/Welcome.jpg'), onclick='changepic()')
+
+            br 
+            input(type='button', value='Change to Red', onclick='chBackcolor()')
+            br
+            input(type='button', value='Change to Yellow', onclick='chBackcolory()')
+    script(type='text/javascript', src='static/signup.js')
