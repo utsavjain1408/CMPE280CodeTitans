@@ -1,6 +1,8 @@
 extends layout
 
 block content
+    style
+        include topping.css
     div(class="sidenav")
         a(href='http://localhost:3050/home') Home
         a(href='http://localhost:3050/pizza') Pizza options
@@ -19,3 +21,48 @@ block content
                         |Vegetable : $10
                     li
                         |Brooklyn : $6
+    
+    h2 Customized Your Topping
+    div
+        #toppiglist
+            h3 Vegetable
+            ul(class='source')
+                li Spinach
+                li Mushroom
+                li Tomato
+                li Onion
+            h3 Meat
+            ul(class='source')
+                li Beef
+                li Chicken
+                li Bacon
+                li Sausage
+            h3 Cheese
+            ul(class='source')
+                li Feta Cheese
+                li Parmesan Cheese
+                li Mozzarella
+                li Goat Cheese
+            h3 Sauce&Dough
+            ul(class='source')
+                li BBQ Sauce
+                li Garlic Sauce
+                li Italian Tomato Sauce
+                li Pesto Sauce
+                li Hot Sauce
+        
+        #cart
+            h2 Chosen Topping
+            ul
+            #items
+
+    script.
+        $(document).ready(function(){
+            $("#toppiglist").accordion();
+            $(".source li").draggable({helper:"clone"});
+            $("#cart").droppable({drop:function(event,ui){
+                $("#items").append($("<li></li>").text(ui.draggable.text()));
+            }});
+            $("#cart").resizable();
+        });
+    
