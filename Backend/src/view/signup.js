@@ -1,3 +1,7 @@
+$(init);
+function init(){
+	$("#datePicker").datepicker();
+}
 //Label colour chances when mouse hovers labels
 var label = document.getElementsByTagName("label");
 	console.log(label);
@@ -45,5 +49,5 @@ var drp = document.querySelector('ol');
 		document.getElementById("demo").innerHTML = "I love Pizza";
 	}
 
-$("#datePicker").datepicker();
+
   
