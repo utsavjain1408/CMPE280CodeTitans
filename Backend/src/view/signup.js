@@ -44,3 +44,6 @@ var drp = document.querySelector('ol');
 	function ilovepizza() {
 		document.getElementById("demo").innerHTML = "I love Pizza";
 	}
+
+$(#datePicker).datePicker();
+  
