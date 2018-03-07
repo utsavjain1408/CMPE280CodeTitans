@@ -1,11 +1,9 @@
-$("#datePicker").click(
-                    function() {
-                        $("#date").datepicker("disable");
-                        $("#dialog").dialog("open");
-                        $("#date").datepicker("enable");
-                        return false;
-                    }
-                  );
+$(init);
+
+function init(){
+	$("datePicker").datepicker();
+}
+
 
 //Label colour chances when mouse hovers labels
 var label = document.getElementsByTagName("label");
