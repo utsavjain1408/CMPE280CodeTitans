@@ -33,7 +33,7 @@ function chBackcolor() {
 	document.getElementById('myImage').src='http://localhost:3050/static/welcome.gif'
  }
 
-var btn = document.querySelectorAll('ul li a');
+/*var btn = document.querySelectorAll('ul li a');
 var drp = document.querySelector('ol');
     for(var b = 0; b < btn.length; b++){
       btn[b].onclick = function()
@@ -51,6 +51,6 @@ var drp = document.querySelector('ol');
 	function ilovepizza() {
 		document.getElementById("demo").innerHTML = "I love Pizza";
 	}
-
+*/
 
   

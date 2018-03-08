@@ -10,17 +10,24 @@ block content
         a(href='http://localhost:3050/pastOrder') Past Orders
         a(href='http://localhost:3050/contactUs') Contact Us
 
-    div
+    
+    h1.ui-state-default Specially Crafted TitanPizza
+    #tabs
         ul
             li
-                a(href='javascript:') Show Pizzas
-                ol
-                    li
-                        |Cheese : $5
-                    li
-                        |Vegetable : $10
-                    li
-                        |Brooklyn : $6
+                a(href='piza.html') Margherita
+            li
+                a(href='Greek garden pizza.html') Greek Garden
+            li
+                a(href='Family favorite.html') Family Favorite
+            li
+                a(href='Mediterranean.html') MEditerranean
+            li
+                a(href='south of the border.html') South of the Border
+            li
+                a(href='Signature pizza.html') Signature - Code Titan
+
+
     
     h2 Customized Your Topping
     div
@@ -58,6 +65,7 @@ block content
 
     script.
         $(document).ready(function(){
+            $("#tabs").tabs();
             $("#toppiglist").accordion();
             $(".source li").draggable({helper:"clone"});
             $("#cart").droppable({drop:function(event,ui){

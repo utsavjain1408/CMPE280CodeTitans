@@ -5,7 +5,7 @@ var path = require('path')
    
     module.exports.route = function route(app) {
         var controllers = require('./controllers/controllers');
-        app.post('/',controllers.login)
+        app.post('/',controllers.login) 
         //servers static content
         app.use('/static', express.static(path.join(__dirname, 'view')))
         
@@ -46,6 +46,10 @@ var path = require('path')
 
         //Renders the page the user will land on after login.
         app.get('/home', function (req, res) {
+            /*if(!req.session.user) {
+                console.log('Need log in first!!');
+                return res.status(401).send();
+            }*/
             console.log('Under Construction!!');
             res.render('home', {
                 title:'Welcome to Titan Pizza',
@@ -83,4 +87,9 @@ var path = require('path')
                 title:'Welcome to Titan Pizza',
             })
         });
+
+        app.get('/logout', function (req, res) {
+            delete req.session.user;
+            res.redirect('/');
+          }); 
     };
