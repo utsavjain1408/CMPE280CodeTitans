@@ -3,7 +3,6 @@ extends layout
 block content
     style
             include signup.css
-           
     form(action='')
         fieldset
             div
@@ -43,8 +42,10 @@ block content
             span.right
                 label Zip Code
                 input( type="text", placeholder="Enter Zip Code", pattern="[0-9]{5}",  title="Zip code(format : 99999 )", required='')
-        input(id='", type='checkbox')
-        | I agree to the terms of use
+        p
+            #terms(style='display:none;')
+                | we don't have terms and conditions right now!!
+            a#showTerms(href='#') Show Terms & Conditions    
+    
         br
         button(type='submit', onclick='ilovepizza()')  Create Account
-   
