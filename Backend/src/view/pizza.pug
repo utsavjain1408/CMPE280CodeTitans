@@ -3,6 +3,8 @@ extends layout
 block content
     style
         include topping.css
+    script(src="https://code.jquery.com/jquery-1.12.4.js")
+    script(src="https://code.jquery.com/ui/1.12.1/jquery-ui.js")
     div(class="sidenav")
         a(href='http://localhost:3050/home') Home
         a(href='http://localhost:3050/pizza') Pizza options
@@ -11,21 +13,21 @@ block content
         a(href='http://localhost:3050/contactUs') Contact Us
 
     
-    h1.ui-state-default Specially Crafted TitanPizza
+    h1 Specially Crafted Titan Pizza
     #tabs
         ul
             li
-                a(href='piza.html') Margherita
+                a(href='http://localhost:3050/static/margherita.html') Margherita
             li
-                a(href='Greek garden pizza.html') Greek Garden
+                a(href='http://localhost:3050/static/greek_garden_pizza.html') Greek Garden
             li
-                a(href='Family favorite.html') Family Favorite
+                a(href='http://localhost:3050/static/family_favorite.html') Family Favorite
             li
-                a(href='Mediterranean.html') MEditerranean
+                a(href='http://localhost:3050/static/mediterranean.html') Mediterranean
             li
-                a(href='south of the border.html') South of the Border
+                a(href='http://localhost:3050/static/south_of_the_border.html') South of the Border
             li
-                a(href='Signature pizza.html') Signature - Code Titan
+                a(href='http://localhost:3050/static/signature_pizza.html') Signature - Code Titan
 
 
     
