@@ -1,6 +1,6 @@
-import mongoose from 'mongoose';
+var mongoose = require('mongoose');
 
-export  const TitanUserSchema = new mongoose.Schema({
+var TitanUserSchema = new mongoose.Schema({
   UUID:{
     type:String,
     required: 'Unique Id Required',
@@ -23,8 +23,31 @@ export  const TitanUserSchema = new mongoose.Schema({
     state: String,
     zip: Number
     },
-    password:{
+  password:{
         type:String,
         required:'Bro, Password is needed.'
     }
 });
+
+//authenticate input against database
+TitanUserSchema.statics.authenticate = function (email, password, callback) {
+  User.findOne({email: email, password: password})
+    .exec(function (err, user) {
+      if (err) {
+        return callback(err)
+      } else if (!user) {
+        var err = new Error('User not found.');
+        err.status = 401;
+        return callback(err);
+      }else {
+        return callback(null, user);
+      }
+    });
+   
+}
+
+var User =  mongoose.model('usermodels', TitanUserSchema)
+module.exports = User;
+
+
+

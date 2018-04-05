@@ -7,11 +7,12 @@ block content
         a(href='http://localhost:3050/profile') Profile
         a(href='http://localhost:3050/pastOrder') Past Orders
         a(href='http://localhost:3050/contactUs') Contact Us
+        a(href='http://localhost:3050/logout') Log Out
     style
         include signup.css
         //include layout.css
     div(class="main") 
-        div(class="title") Welcome to CodeTitans!
+        div(class="title") Welcome to Titan Pizza, #{user.UserName.firstName}!
             img(src=('http://localhost:3050/static/Welcome.jpg'))
     h3(class="title") Store Location
     #map
