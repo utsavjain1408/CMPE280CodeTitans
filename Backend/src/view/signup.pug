@@ -18,7 +18,7 @@ block content
                 input(type='email', placeholder='Enter Email *', pattern='^.+@.+\..{2,4}$', required='', title='xxxxx@xxxx.xxx')
             .right
                 label(for='Password') Password  
-                input(name='Password', type='password', placeholder='Enter Password *', pattern='\\d{7}', title='Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters', required='')
+                input(name='Password', type='password', placeholder='Enter Password *', pattern='.{8,12}', title='Must contain at least 8 or more characters', required='')
             div
             .left
                 label(for='Phone') Phone Number
