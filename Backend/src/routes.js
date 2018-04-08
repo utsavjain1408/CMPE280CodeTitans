@@ -8,6 +8,11 @@ var path = require('path')
     module.exports.route = function route(app) {
         //var controllers = require('./controllers/controllers');
         
+        //SignUp
+        app.post('/signup', (req, res)=>{
+            console.log(`You have sent me ${req.body}.`)
+        })
+        
         //servers static content
         app.use('/static', express.static(path.join(__dirname, 'view')))
         
@@ -57,7 +62,7 @@ var path = require('path')
         
         //Renders SignUP page
         app.get('/signup', function (req, res) {
-            console.log('Under Construction!!');
+            // console.log('Under Construction!!');
             res.render('signup', {
                 title:'Career at Titan Pizza',
             })

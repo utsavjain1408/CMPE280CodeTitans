@@ -57,3 +57,59 @@ var drp = document.querySelector('ol');
 */
 
   
+function ilovepizza() {
+	alert('I love pizza, Click Ok To create account and signup from home page!')
+	// var m
+	// console.log('Function called')
+	// m = document.getElementById("fn")
+	// var v = '{"UserName" : {"firstName":"'
+	// console.log(document.getElementById("fn").value)
+	// v = v +  document.getElementById("fn").value
+	// console.log(document.getElementById("ln").value)
+	// v =v+'", "lastName":"' + document.getElementById("ln").value
+	// console.log(document.getElementById("email").value)
+	// v = v +'"}, "email" : "'+ document.getElementById("email").value
+	// console.log(document.getElementById("password").value)
+	
+	// v = v +'", "phoneNumber" :"'+document.getElementById("phone").value
+	// console.log(document.getElementById("phone").value)
+	// console.log(document.getElementById("datePicker").value)
+	// v = v + '","address":{"line1":"' + document.getElementById("addline1").value
+	// console.log(document.getElementById("addline1").value)
+	// v = v + '", "city":"' + document.getElementById("city").value
+	// v = v +'", "state":"' + document.getElementById("state").value
+	// v = v +'", "zip":"' + document.getElementById("zip").value + '"}'
+
+	// console.log(document.getElementById("zip").value)
+	// console.log(document.getElementById("state").value)
+	// console.log(document.getElementById("city").value)
+	// v = v +', "password" :"'+document.getElementById("password").value+ '"}'
+	// alert(`Your name is ${(v)}`)
+	// var settings = {
+	// 	"async": true,
+	// 	"crossDomain": true,
+	// 	"url": "http://localhost:3000/user/"+document.getElementById("email").value,
+	// 	"method": "POST",
+	// 	"headers": {
+	// 	  "content-type": "application/x-www-form-urlencoded",
+	// 	  "cache-control": "no-cache",
+	// 	  "postman-token": "6acee27d-cce3-1a9e-da4b-30b9903e3161"
+	// 	},
+	// 	"data": {
+	// 	  "UserName.firstName": "Utsav",
+	// 	  "UserName.lastName": "Jain",
+	// 	  "email": "utsav@jain.com",
+	// 	  "phoneNumber": "9998487226",
+	// 	  "address.line1": "190 Ryland Street",
+	// 	  "address.line2": "5402 Fountain Plaza",
+	// 	  "address.city": "San Jose",
+	// 	  "address.state": "California",
+	// 	  "address.zip": "95110",
+	// 	  "password": "12345"
+	// 	}
+	//   }
+	  
+	//   $.ajax(settings).done(function (response) {
+	// 	console.log(response);
+	//   });
+}

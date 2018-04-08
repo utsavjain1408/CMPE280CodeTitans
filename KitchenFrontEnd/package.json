@@ -1,0 +1,16 @@
+{
+  "name": "kitchenfrontend",
+  "version": "1.0.0",
+  "description": "This is the front-end server for the Titan pizza Kitchen",
+  "main": "index.js",
+  "scripts": {
+    "test": "node index.js"
+  },
+  "keywords": [
+    "Titan",
+    "Pizza",
+    "kitchen"
+  ],
+  "author": "Utsav Jain",
+  "license": "ISC"
+}

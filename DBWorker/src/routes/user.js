@@ -9,6 +9,7 @@ import {
 export const routes = (app) =>{
     app.route('/user')
         .get(getAllUsers)
+        .post(createNewUser)
     
     app.route('/user/:email')
         .get(getUserByEmail)

@@ -3,45 +3,45 @@ extends layout
 block content
     style
             include signup.css
-    form(action='/signup' method = 'post')
+    form(id = 'signupform' action='http://localhost:3000/user' method = 'post')
         fieldset
             div
             .left
                 label(for='FirstName') First Name   
-                input(name='FirstName', type='text', placeholder='First Name *', required='')
+                input(id = 'fn' name='UserName.firstName', type='text', placeholder='First Name *', required='')
             .right
                 label(for='LastName') Last Name 
-                input(name='LastName', type='text', placeholder='Last Name *', required='')
+                input(id = 'ln' name='UserName.lastName', type='text', placeholder='Last Name *', required='')
             div
             .left
-                label(for='Email') Email      
-                input(type='email', placeholder='Enter Email *', pattern='^.+@.+\..{2,4}$', required='', title='xxxxx@xxxx.xxx')
+                label(for='email') Email      
+                input(id = 'email' name = 'email' type='text', placeholder='Enter Email *', pattern='^.+@.+\..{2,4}$', required='', title='xxxxx@xxxx.xxx')
             .right
                 label(for='Password') Password  
-                input(name='Password', type='password', placeholder='Enter Password *', pattern='.{8,12}', title='Must contain at least 8 or more characters', required='')
+                input(id = 'password' name='password', type='password', placeholder='Enter Password *', pattern='.{8,12}', title='Must contain at least 8 or more characters', required='')
             div
             .left
                 label(for='Phone') Phone Number
-                input(name='Phone', type='tel',pattern="[0-9]{10}", placeholder='Phone Number *', title='Phone Number (Format: (999)999-9999)', required='')
+                input(id = 'phone' name='phoneNumber', type='tel',pattern="[0-9]{10}", placeholder='Phone Number *', title='Phone Number (Format: (999)999-9999)', required='')
             .right
                 label(for='date') Date of Birth
-                input(name='date', id='datePicker' type='text', placeholder='Birthday date') 
+                input(name='date', id='datePicker', type='text', placeholder='Birthday date') 
         h2 Location
         fieldset
             p
             span.left
                 label(for='address')  Address 
-                input(type='text', placeholder='123 Main St.')
+                input(id = 'addline1', name = 'address.line1', type='text', placeholder='123 Main St.')
             span.right
                 label City  
-                input(type='text', placeholder='City')
+                input(id = 'city', name = 'address.city', type='text', placeholder='City')
             p
             span.left
                 label State  
-                input(type='text', placeholder='State')
+                input(id = 'state', name = 'address.state', type='text', placeholder='State')
             span.right
                 label Zip Code
-                input( type="text", placeholder="Enter Zip Code", pattern="[0-9]{5}",  title="Zip code(format : 99999 )", required='')
+                input(id = 'zip' , name = 'address.zip', type="text", placeholder="Enter Zip Code", pattern="[0-9]{5}",  title="Zip code(format : 99999 )", required='')
         p
             #terms(style='display:none;')
                 | we don't have terms and conditions right now!!

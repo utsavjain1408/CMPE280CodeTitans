@@ -12,7 +12,7 @@ export const createNewUser = (req,res) =>{
     if(err){
       res.send(err);
     }
-    res.json(user);
+    res.redirect('http://localhost:3050');
   });
 };
 
