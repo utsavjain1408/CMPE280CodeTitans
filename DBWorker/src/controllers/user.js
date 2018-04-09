@@ -44,7 +44,7 @@ export const deleteUser = (req,res) =>{
         if(err){
             res.send(err);
         }
-        res.json(user);
+        res.redirect('http://localhost:3050');
     });
 }
 export const getAllUsers = (req,res) =>{

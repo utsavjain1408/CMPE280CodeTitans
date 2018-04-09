@@ -16,5 +16,8 @@ export const routes = (app) =>{
         .post(updateUserInfo)
         .put(updateUserInfo)
         .delete(deleteUser)
+    
+    app.route('/user/delete/:email')
+        .post(deleteUser)
 }
 export default routes

@@ -113,3 +113,19 @@ function ilovepizza() {
 	// 	console.log(response);
 	//   });
 }
+function deleteaccount(email){
+	// var settings = {
+	// 	"url": "http://localhost:3000/user/"+email,
+	// 	"method": "DELETE",
+	// 	"headers": {
+	// 	  "content-type": "application/x-www-form-urlencoded",
+	// 	  "Access-Control-Allow-Credentials": "false"
+	// 	}
+	//   }
+	  
+	//   $.ajax(settings).done(function (response) {
+	// 	console.log(response);
+	//   });
+	// console.log(email);
+	alert("Deleting Accocunt " + email)
+}

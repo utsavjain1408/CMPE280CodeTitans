@@ -60,4 +60,6 @@ block content
                         td
                             input(name='address.zip', type='text', value=user.address.zip, pattern="[0-9]{5}")
                 button(type="submit") Update and Save
-            
+        form(id = 'signupform' action='http://localhost:3000/user/delete/'+ user.email method = 'post')
+            button(type="submit",  onclick = "deleteaccount(\'"+user.email+"\')") Delete Account
+            //script(type='text/javascript', src='static/signup.js')
