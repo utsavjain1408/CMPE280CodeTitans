@@ -12,5 +12,52 @@ block content
             include signup.css
             //include layout.css
     div(class="main") 
-        div(class="title") We don't have a Database right now .. So.. Please be patient to view your proflie
-            img(src=('http://localhost:3050/static/Welcome.jpg'))
+        div(class="title") PROFILE INFORMATION
+            form(id = 'signupform' action='http://localhost:3000/user/'+ user.email method = 'post')
+                table
+                    tr
+                        td
+                            label(for='FirstName') First Name 
+                        td
+                            input(name='UserName.firstName', type='text', value=user.UserName.firstName)
+                    tr
+                        td
+                            label(for='LastName') Last Name
+                        td    
+                            input(name='UserName.lastName', type='text', value=user.UserName.lastName)
+                    tr
+                        td
+                            label(for='email') Email
+                        td
+                            label(for='emailValue') #{user.email}
+                    tr
+                        td
+                            label(for='Phone') Phone Number
+                        td
+                            input(name='phoneNumber', type='text', value=user.phoneNumber, pattern="[0-9]{10}")
+                    tr
+                        td
+                            label(for='address')  Address 
+                        td
+                            input(name='address.line1', type='text', value=user.address.line1)
+                    tr
+                        td  
+                        td          
+                            input(name='address.line2', type='text', value=user.address.line2)
+                    tr
+                        td
+                            label City 
+                        td
+                            input(name='address.city', type='text', value=user.address.city)
+                    tr
+                        td
+                            label State 
+                        td
+                            input(name='address.state', type='text', value=user.address.state)
+                    tr
+                        td
+                            label Zip Code
+                        td
+                            input(name='address.zip', type='text', value=user.address.zip, pattern="[0-9]{5}")
+                button(type="submit") Update and Save
+            

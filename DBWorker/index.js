@@ -21,9 +21,9 @@ user(app)
 orders(app);
 kitchen(app)
 app.get('/', (req, res) =>
-    res.send(`Node and Express Server ${PORT} port per hal raha rai`)
+    res.send(`Node and Express Server running on ${PORT}`)
 );
 
 app.listen(PORT, () =>
-    console.log(`Aapna server ${PORT} per chal raha rai.`)
+    console.log(`Server running on ${PORT}.`)
 );

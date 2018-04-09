@@ -34,7 +34,8 @@ export const updateUserInfo = (req,res) =>{
         if(err){
           res.send(err);
         }
-        res.json(user);
+        // res.json(user);
+        res.redirect('http://localhost:3050/profile');
       });
 }
 export const deleteUser = (req,res) =>{

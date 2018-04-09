@@ -25,7 +25,7 @@ const TitanUserSchema = new mongoose.Schema({
     },
   password:{
         type:String,
-        required:'Bro, Password is needed.'
+        required:'Login Required!!'
     }
 });
 

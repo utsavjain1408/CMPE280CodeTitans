@@ -10,10 +10,10 @@ export const routes = (app) =>{
     app.route('/user')
         .get(getAllUsers)
         .post(createNewUser)
-    
+
     app.route('/user/:email')
         .get(getUserByEmail)
-        .post(createNewUser)
+        .post(updateUserInfo)
         .put(updateUserInfo)
         .delete(deleteUser)
 }

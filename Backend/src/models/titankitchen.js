@@ -28,6 +28,6 @@ export  const TitanKitchenSchema = new mongoose.Schema({
     }],
     Password:{
         type:String,
-        required:'Bro, password!! HOw you login without PAssworD!'
+        required:'Login Required!!'
     }  
 });

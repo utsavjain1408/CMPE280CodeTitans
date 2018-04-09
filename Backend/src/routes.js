@@ -92,11 +92,23 @@ var path = require('path')
 
         //Renders the page with User’s Profile
         app.get('/profile', function (req, res, next) {
-            console.log('Under Construction!!');
-            res.render('profile', {
-                title:'Welcome to Titan Pizza',
-            })
-        });
+            User.findById(req.session.userId)
+            .exec(function (error, user) {
+            if (error) {
+                return next(error);
+            } else {
+                if (user === null) {
+                var err = new Error('Not authorized! Go back!');
+                err.status = 400;
+                return next(err);
+                } else {
+                    res.render('profile', {
+                        title:'Welcome to Titan Pizza', user : user
+                    })
+                }
+            }
+        });   
+    });
 
         //Renders the page with user’s past orders
         app.get('/pastOrder', function (req, res) {
