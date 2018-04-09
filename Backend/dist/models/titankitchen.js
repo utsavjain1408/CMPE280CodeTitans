@@ -39,6 +39,6 @@ var TitanKitchenSchema = exports.TitanKitchenSchema = new _mongoose2.default.Sch
   }],
   Password: {
     type: String,
-    required: 'Bro, password!! HOw you login without PAssworD!'
+    required:'Login Required!!'
   }
 });

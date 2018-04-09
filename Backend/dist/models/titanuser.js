@@ -36,6 +36,6 @@ var TitanUserSchema = exports.TitanUserSchema = new _mongoose2.default.Schema({
   },
   password: {
     type: String,
-    required: 'Bro, Password is needed.'
+    required:'Login Required!!'
   }
 });
