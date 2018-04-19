@@ -14,7 +14,8 @@ const path = require('path')
 const PORT = 3050
 
 
-
+var cors = require('cors')
+app.use(cors());
 //mongoose connection
 
 mongoose.connect('mongodb://35.194.50.254/ProductCatalogue');

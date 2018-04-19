@@ -7,7 +7,8 @@ import kitchen from './src/routes/kitchen'
 import mongoose from 'mongoose'
 const app = express();
 const PORT = 3000;
-
+var cors = require('cors')
+app.use(cors());
 //mongoose connection
 
  mongoose.Promise = global.Promise;

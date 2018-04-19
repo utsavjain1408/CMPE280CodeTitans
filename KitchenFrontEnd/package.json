@@ -1,16 +1,34 @@
 {
   "name": "kitchenfrontend",
   "version": "1.0.0",
-  "description": "This is the front-end server for the Titan pizza Kitchen",
+  "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "node index.js"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon ./index.js --exec babel-node -e js"
   },
-  "keywords": [
-    "Titan",
-    "Pizza",
-    "kitchen"
-  ],
-  "author": "Utsav Jain",
-  "license": "ISC"
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.18.2",
+    "connect-mongo": "^2.0.1",
+    "cookie-parser": "^1.4.3",
+    "cors": "^2.8.4",
+    "express": "^4.16.2",
+    "express-session": "^1.15.6",
+    "mongoose": "^5.0.4",
+    "pug": "^2.0.0-rc.4"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-core": "^6.26.0",
+    "babel-preset-es2015": "^6.24.1",
+    "babel-register": "^6.26.0",
+    "forever": "^0.15.3",
+    "gulp": "github:gulpjs/gulp#4.0",
+    "gulp-babel": "^7.0.1",
+    "gulp-imagemin": "^4.1.0",
+    "gulp-uglifyes": "^0.1.3",
+    "nodemon": "^1.14.12"
+  }
 }

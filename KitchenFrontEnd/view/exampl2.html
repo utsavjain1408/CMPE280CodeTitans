@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.6/angular.min.js"></script>
+</head>
+
+<body>
+    <div ng-app="myApp" ng-controller="myCtrl"> 
+        <h1 class = "heading" align = 'center'/> Titan Pizza 
+        <h2 class = "subheading" align = 'center'/> Create a new signature Pizza
+        <br/>
+            <form name="myForm" action='' method = 'POST'>
+            <label class = 'name' for='pizzaName' /> Signature Pizza Name
+            <input type ='text' 
+                    id = 'pizzaName' 
+                    name = 'pizzaName'
+                    placeholder="Enter signature name here" 
+                    ng-model="pizzaname" 
+                    ng-minlength="3" 
+                    ng-maxlength="8"
+                    required/>
+                    <span style="color:red" ng-show="myForm.pizzaName.$dirty && myForm.pizzaName.$invalid">
+                    <span ng-show="myForm.pizzaName.$error.required">Pizza Name is required!!!
+                    </span>
+                    </span>
+            <br/>
+                    <label class = 'cost' for='cost' /> Signature Pizza Cost
+            <input type ='text' 
+                    id = 'cost' 
+                    name = 'cost'
+                    placeholder="Enter signature price here" 
+                    ng-model="cost" 
+                    min="3" 
+                    max="8"
+                    required/>
+                    <span style="color:red" ng-show="cost.$error.integer">The value is not a valid integer!</span>
+             <span style="color:red" ng-show="cost.$error.min || cost.$error.max">
+      Cost must be between 3 and 8</span>
+            <fieldset>
+                <legend>Choose your toppings</legend>
+                <div>
+                    <input type="checkbox" 
+                            id="Onion" 
+                            name="toppings"
+                            value="Onion" 
+                            ng-model="topping.Onion" 
+                            ng-true-value="'Onion '" 
+                            ng-false-value="" 
+                            ng-change="Onion">
+                    <label for="Onion">Onion</label>
+                </div>
+                <div>
+                    <input type="checkbox" 
+                            id="BananaPeppers" 
+                            name="toppings" 
+                            value="Banana Peppers" 
+                            ng-model="topping.BananaPeppers" 
+                            ng-true-value="'Banana Peppers '" 
+                            ng-false-value="">
+                    <label for="BananaPeppers">Banana Peppers</label>
+                </div>
+                <div>
+                    <input type="checkbox"
+                            id="Olive" 
+                            name="toppings" 
+                            value="Olive" 
+                            ng-model="topping.Olive" 
+                            ng-true-value="'Olive '" 
+                            ng-false-value="">
+                    <label for="Olive">Olive</label>
+                </div>
+                <div>
+                    <input type="checkbox" 
+                            id="Paneer"
+                            name="toppings" 
+                            value="Paneer"
+                            ng-model="topping.Paneer" 
+                            ng-true-value="'Paneer '" 
+                            ng-false-value="">
+                    <label for="Paneer">Paneer</label>
+                </div>
+                <div>
+                    <input type="checkbox"
+                            id="Spinach"
+                            name="toppings" 
+                            value="Spinach" 
+                            ng-model="topping.Spinach" 
+                            ng-true-value="'Spinach '" 
+                            ng-false-value="">
+                    <label for="Spinach">Spinach</label>
+                </div>
+            </fieldset>
+            <input type="submit"
+            ng-disabled="myForm.pizzaName.$invalid">
+        </form>
+        <br/>
+        <div>
+            <fieldset>
+                Output Will look like: 
+                <br/>{{pizzaname}}
+                <br/>{{topping.Onion}}{{topping.BananaPeppers}}
+                {{topping.Olive}}{{topping.Paneer}}
+                {{topping.Spinach}}
+                <br/>
+                {{cost | currency}}
+                <br/>
+            </fieldset>
+            <div>Titan Pizza Stricly adheres to the following policy rules:
+                    <ol class="lststyle">
+ 
+                            <li ng-repeat="policy in name">{{policy}}</li>
+                             
+                            </ol>
+            </div>
+        </div>       
+    </div>
+    <script>
+            var app = angular.module('myApp', []);
+            app.controller('myCtrl', function($scope) 
+            {
+                //$scope.name = "John Doe";
+                $scope.name = [
+
+                    "Pizza must be delicious.",
+
+                    "Pizza nust be of titan standards.",
+
+                    "It must be visually appealing.",
+
+                    "Pizza must be hot when served.",
+
+                     "We must care for the environment."
+
+                    ]
+
+            });
+                app.controller('ExampleController', ['$scope', function($scope) {
+                $scope.topping = {
+                value1 : true,
+                value2 : 'YES'
+            };
+    }]);
+    </script>
+</body>
+
+</html>
