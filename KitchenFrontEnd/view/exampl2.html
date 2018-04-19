@@ -10,7 +10,7 @@
         <h1 class = "heading" align = 'center'/> Titan Pizza 
         <h2 class = "subheading" align = 'center'/> Create a new signature Pizza
         <br/>
-            <form name="myForm" action='' method = 'POST'>
+            <form name="myForm" action='' method = ''>
             <label class = 'name' for='pizzaName' /> Signature Pizza Name
             <input type ='text' 
                     id = 'pizzaName' 
@@ -92,16 +92,16 @@
                 </div>
             </fieldset>
             <input type="submit"
-            ng-disabled="myForm.pizzaName.$invalid">
+            ng-disabled="myForm.pizzaName.$invalid", onclick="created()">
         </form>
         <br/>
         <div>
             <fieldset>
                 Output Will look like: 
-                <br/>{{pizzaname}}
-                <br/>{{topping.Onion}}{{topping.BananaPeppers}}
-                {{topping.Olive}}{{topping.Paneer}}
-                {{topping.Spinach}}
+                <br/>{{pizzaname | uppercase}}
+                <br/>{{topping.Onion | uppercase}}{{topping.BananaPeppers| uppercase}}
+                {{topping.Olive| uppercase}}{{topping.Paneer| uppercase}}
+                {{topping.Spinach| uppercase}}
                 <br/>
                 {{cost | currency}}
                 <br/>
@@ -117,6 +117,9 @@
     </div>
     <script>
             var app = angular.module('myApp', []);
+            function created(){
+                alert('New Pizza Invented!! ')
+            }
             app.controller('myCtrl', function($scope) 
             {
                 //$scope.name = "John Doe";
