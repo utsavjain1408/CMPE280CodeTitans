@@ -23,7 +23,6 @@ button{
     width:50%;
 }
 .left{
-    
     float: left;
     width:50%;
 }
@@ -31,7 +30,10 @@ button{
     float:right;
     width:50%;
  }
- 
+ .full{
+    float:left;
+    width:99%;
+ }
 label{
     text-align: right;
     font-weight: bold;
@@ -41,6 +43,9 @@ fieldset
 {
     max-width: 70%;
     border-color: white;
+}
+.initiallyHidden { 
+    display: none; 
 }
 
 /*.SignUp

@@ -4,44 +4,88 @@ block content
     style
             include signup.css
     form(id = 'signupform' action='http://localhost:3000/user' method = 'post')
+        h2#hidename Create an Account
         fieldset
             div
-            .left
+            .left.hidename
                 label(for='FirstName') First Name   
                 input(id = 'fn' name='UserName.firstName', type='text', placeholder='First Name *', required='')
-            .right
+            .right.hidename
                 label(for='LastName') Last Name 
                 input(id = 'ln' name='UserName.lastName', type='text', placeholder='Last Name *', required='')
             div
-            .left
+            .left.hidename
                 label(for='email') Email      
                 input(id = 'email' name = 'email' type='text', placeholder='Enter Email *', pattern='^.+@.+\..{2,4}$', required='', title='xxxxx@xxxx.xxx')
-            .right
+            .right.hidename
                 label(for='Password') Password  
                 input(id = 'password' name='password', type='password', placeholder='Enter Password *', pattern='.{8,12}', title='Must contain at least 8 or more characters', required='')
             div
-            .left
+            .left.hidename
                 label(for='Phone') Phone Number
                 input(id = 'phone' name='phoneNumber', type='tel',pattern="[0-9]{10}", placeholder='Phone Number *', title='Phone Number (Format: (999)999-9999)', required='')
-            .right
+            .right.hidename
                 label(for='date') Date of Birth
                 input(name='date', id='datePicker', type='text', placeholder='Birthday date') 
-        h2 Location
+        h2#hidelocation Location
         fieldset
             p
-            span.left
+            span.left.hidelocation
                 label(for='address')  Address 
                 input(id = 'addline1', name = 'address.line1', type='text', placeholder='123 Main St.')
-            span.right
+            span.right.hidelocation
                 label City  
                 input(id = 'city', name = 'address.city', type='text', placeholder='City')
             p
-            span.left
+            span.left.hidelocation
                 label State  
                 input(id = 'state', name = 'address.state', type='text', placeholder='State')
-            span.right
+            span.right.hidelocation
                 label Zip Code
                 input(id = 'zip' , name = 'address.zip', type="text", placeholder="Enter Zip Code", pattern="[0-9]{5}",  title="Zip code(format : 99999 )", required='')
+        h2#hidecard Credit Card(Optional)
+        fieldset
+                div
+                .full.hidecard.initiallyHidden
+                    label(for='card') Card Number
+                    
+                        input(id='card', name='card', type='text', placeholder='Card Number') 
+                p        
+                div
+                .left.hidecard.initiallyHidden
+                    .month
+                      span(style='font-weight:bold') Month    
+                      select(name='Month')
+                        option(value='january') January
+                        option(value='february') February
+                        option(value='march') March
+                        option(value='april') April
+                        option(value='may') May
+                        option(value='june') June
+                        option(value='july') July
+                        option(value='august') August
+                        option(value='september') September
+                        option(value='october') October
+                        option(value='november') November
+                        option(value='december') December
+                .right.hidecard.initiallyHidden
+                    .year
+                      span(style='font-weight:bold') Year    
+                      select(name='Year')
+                        option(value='2016') 2016
+                        option(value='2017') 2017
+                        option(value='2018') 2018
+                        option(value='2019') 2019
+                        option(value='2020') 2020
+                        option(value='2021') 2021
+                        option(value='2022') 2022
+                        option(value='2023') 2023
+                        option(value='2024') 2024
+                br        
+                .hidecard.initiallyHidden
+                    label(for='cvv') CVV  
+                    input(id='cvv', name='cvv', type='text', placeholder='CVV') 
+
         p
             #terms(style='display:none;')
                 | we don't have terms and conditions right now!!

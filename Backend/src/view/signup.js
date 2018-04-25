@@ -5,6 +5,15 @@ function init(){
 	$('#showTerms').click(function(){
         $('#terms').dialog({modal:true});   
     });
+    $("#hidecard").click(function(){
+    	$(".hidecard").toggle();
+	});
+    $("#hidelocation").click(function(){
+    	$(".hidelocation").toggle();
+	});
+    $("#hidename").click(function(){
+    	$(".hidename").toggle();
+	});
 }
 
 
