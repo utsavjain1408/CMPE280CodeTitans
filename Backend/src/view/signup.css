@@ -38,7 +38,10 @@ label{
     text-align: right;
     font-weight: bold;
 }
-
+.year,.month{
+    padding: 12px; 
+    margin: 5px 0px 15px 0px;
+}
 fieldset
 {
     max-width: 70%;
