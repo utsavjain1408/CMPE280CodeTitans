@@ -142,8 +142,93 @@ ol{display: none;}
     }
 
 #tabs {
-    width: 80%;
+    /* width: 80%;
     display: flex;
     flex-direction: column;
-    left: 80px;
+    left: 80px; */
+    display: table;
+}
+
+#selectable .ui-selecting { 
+    background: #FECA40; 
+}
+
+#selectable .ui-selected { 
+    background: white; 
+}
+
+#selectable {     
+    list-style-type: none; 
+    margin: 0; 
+    padding-left: 0; 
+    text-align: center;
+    width: fit-content;
+}
+
+#selectable li { 
+    margin: 3px; 
+    padding: 0.4em;
+    width: fit-content;
+}
+
+ul#selectable li {
+    display: inline;
+}
+#selectable .ui-widget-content {
+    border: none;
+    background: none;
+    display: table-cell;
+    vertical-align: middle;
+}
+
+.pizzaDescription {
+    font: 1em sans-serif;
+    color: royalblue;
+}
+
+
+#customSelectable {     
+    list-style-type: none; 
+    margin-left: 15%;
+    padding-left: 0; 
+    text-align: center;
+    width: fit-content;
+}
+
+#customSelectable li { 
+    margin: 3px; 
+    padding: 0.4em;
+    width: fit-content;
+}
+
+ul#customSelectable li {
+    display: inline;
+}
+#customSelectable .ui-widget-content {
+    border: none;
+    background: red;
+    color: white;
+    width: 500px;
+    /* padding-left: 30%; */
+    height: 20%;
+    display: table-cell;
+    vertical-align: middle;
+}
+
+.customPizzaDescription {
+    font: 3em sans-serif;
+    color: white;
+}
+
+#customDialogDiv {
+    padding: 10px;
+    margin: 10px;
+    border: 1px solid #aaaaaa;
+}
+
+.addToCartButton {
+    padding: 10px;
+    margin: 10px;
+    flex-direction: row-reverse;
+    display: flex;
 }
