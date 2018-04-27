@@ -1,0 +1,48 @@
+extends layout
+
+block content
+    style
+            include cart_styles.css 
+    div(class="sidenav")
+        a(href='http://localhost:3050/home') Home
+        a(href='http://localhost:3050/pizza') Pizza options
+        a(href='http://localhost:3050/profile') Profile
+        a(href='http://localhost:3050/pastOrder') Past Orders
+        a(href='http://localhost:3050/contactUs') Contact Us
+        a(href='http://localhost:3050/logout') Log Out
+
+
+    #w
+      header#title
+        h1 Titan Pizza Shopping Cart
+      #page
+        table#cart
+          thead
+            tr
+              th.first Photo
+              th.second Pizza
+              th.third Qty
+              th.fourth Price
+              th.fifth  
+          tbody
+            // shopping cart contents
+            each product in products
+                tr.productitm
+                    td
+                        img.thumb(src='http://localhost:3050/static/Margherita.png')
+                    td #{product.title}
+                    td #{product.qty}
+                    td #{product.price}
+                    td
+                        span.remove
+                            img(src='http://localhost:3050/static/trash.png', alt='X')
+
+            tr.totalprice
+                td.light Total:
+                td(colspan='2')  
+                td(colspan='2')
+                    span.thick #{totalPrice}
+            // checkout btn
+            tr.checkoutrow
+                td.checkout(colspan='5')
+                    button#submitbtn Place Order Now!

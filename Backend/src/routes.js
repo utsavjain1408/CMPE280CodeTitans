@@ -1,5 +1,7 @@
 var express = require('express')
 var User = require('./models/titanuser');  
+var Cart = require('./models/cart');
+
 var path = require('path')
     'use strict';
 
@@ -146,4 +148,40 @@ var path = require('path')
                 });
               }
           }); 
+
+        app.post('/shopping_cart', function(req, res, next) {
+            
+            // product_id = req.body.id;
+            var product_id = 2;
+            var cart = new Cart(req.session.cart ? req.session.cart : {});
+            cart.add(product_id);
+            req.session.cart = cart;
+            console.log(req.session.cart);
+            res.redirect('/pizza');
+
+        });
+        
+        app.get('/shopping_cart', function(req, res, next) {
+            if (!req.session.cart) {
+            return res.render('cart', {
+                products: null
+            });
+            }
+            var cart = new Cart(req.session.cart);
+            console.log(cart);
+            res.render('cart', {
+            title: 'Titan Pizza Shopping Cart',
+            products: cart.generateArray(),
+            totalPrice: cart.totalPrice
+            })
+        });
+        
+        app.get('/remove/:id', function(req, res, next) {
+            var productId = req.params.id;
+            var cart = new Cart(req.session.cart ? req.session.cart : {});
+        
+            cart.remove(productId);
+            req.session.cart = cart;
+            res.redirect('/cart');
+        });
     };
