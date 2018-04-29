@@ -1,16 +1,30 @@
 /* Style inputs with type, select elements and textareas */
-input {
+input{
     width: 60%;
+    border-color: #ccc;
     padding: 12px; /* Some padding */  
     border: 1px solid #ccc; /* Gray border */
     border-radius: 4px; /* Rounded borders */
     background: #f1f1f1; 
     margin: 5px 0px 15px 0px;
 }
+input:valid{
+    border-color: green;
+}
+
+input:invalid {
+    border-color: red;
+}
+input:focus{
+    border-color: blue;
+}
 
 h1 , h2{
     color: #4CAF50;
 }
+/*fieldset{
+    border: 0;
+}*/
 button{
     background-color: #4CAF50; /* Green */
     border: none;
@@ -32,25 +46,40 @@ button{
  }
  .full{
     float:left;
-    width:99%;
+    width:100%;
  }
+.card{
+    width:8%;
+    margin-left:5px;
+}
+#cvv{
+        width:20%;
+    margin-left:5px;
+}
+
 label{
     text-align: right;
     font-weight: bold;
 }
+
 .year,.month{
     padding: 12px; 
     margin: 5px 0px 15px 0px;
 }
 fieldset
 {
-    max-width: 70%;
+    max-width: 90%;
     border-color: white;
 }
-.initiallyHidden { 
+#accordion-resizer {
+    padding: 10px;
+    width: 650px;
+    height: 220px;
+  }
+/*.initiallyHidden { 
     display: none; 
 }
-
+*/
 /*.SignUp
 {
     padding: 15px 20px 15px 20px;
@@ -88,7 +117,10 @@ fieldset
 /* Style page content */
 .main {
     margin-left: 160px; /* Same as the width of the sidebar */
-    padding: 0px 10px;
+    padding: 50px 0px 10px;
+    text-align: center;
+    vertical-align: bottom
+    position: relative;
 }
 
 /* On smaller screens, where height is less than 450px, change the style of the sidebar (less padding and a smaller font size) */
