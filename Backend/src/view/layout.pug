@@ -4,7 +4,7 @@ html
         style
             include layout.css
         title   #{title}
-        link(rel="stylesheet" type="text/css" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/themes/hot-sneaks/jquery-ui.css")
+        link(rel="stylesheet" type="text/css" href="http://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css")
         script(src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js")
         script(src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.13/jquery-ui.min.js")
         script(src="//code.angularjs.org/1.6.10/angular.min.js")
@@ -24,11 +24,12 @@ html
         block content
         br
         br
-        footer(class="main")  
-            p Copyright Info: We don't own ANY  copyrights
-            p 
-                a(href = 'http://localhost:3050/about') About Us
-            p 
-                a(href = 'http://localhost:3050/career') Career
+        div
+            footer(class="main")  
+                p Copyright Info: We don't own ANY  copyrights
+                p 
+                    a(href = 'http://localhost:3050/about') About Us
+                p 
+                    a(href = 'http://localhost:3050/career') Career
 
         script(type='text/javascript', src='static/signup.js')

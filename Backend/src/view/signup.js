@@ -15,12 +15,15 @@ function init(){
     	$(".hidename").toggle();
 	});
 	$( "#accordion" ).accordion({
-      collapsible: true
+      collapsible: true,
+      autoFill:true,
+
     });
+    $(".ui-accordion-content").show();
 
 	$( "#accordion-resizer" ).resizable({
-      minHeight: 140,
-      minWidth: 200,
+      minHeight: 100,
+      minWidth: 150,
       resize: function() {
         $( "#accordion" ).accordion( "refresh" );
       }

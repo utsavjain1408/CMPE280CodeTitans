@@ -11,6 +11,7 @@ body {
     padding: 0;
 }
 
+
 h1  {
     color: rgba(0, 0, 0, 0.884);
     text-shadow: #fff
@@ -20,9 +21,14 @@ legend {
         color:black;
         font-size: 18px;
 }
-p, label    {
+p, label  {
     color: rgb(22, 21, 21);
     text-shadow: #fff;
+    display: inline-block;
+}
+label{
+    display: block;
+    float: left;
 }
 a {
     color: rgb(8, 16, 255);
@@ -37,30 +43,45 @@ a {
 
 }
 
-.login input[type=text]{
+.login input[type=text],
+.login input[type=password],
+.login input[type=tel]{
     width: 250px;
     height: 20px;
     /* background: transparent; */
-    border: 1px solid rgba(15, 15, 15, 0.6);
-    border-radius: 2px;
+    padding: 12px; /* Some padding */  
+    border-radius: 4px;
     font-family: 'Exo', sans-serif;
     font-size: 12px;
     font-weight: 400;
     padding: 4px;
 }
 
-.login input[type=password]{
-    width: 250px;
+#card input[type=text]{
+    width: 80px;
     height: 20px;
-    /*background: transparent;*/
-    border: 1px solid rgba(15,15,15,0.6);
-    border-radius: 2px;
-    color: #000;
+    /* background: transparent; */
+    padding: 12px; /* Some padding */  
+    border-radius: 4px;
     font-family: 'Exo', sans-serif;
     font-size: 12px;
     font-weight: 400;
     padding: 4px;
-    margin-top: 10px;
+    margin: 0px 0px 0px 18px
+}
+#card p input[type=text]{
+    width: 80px;
+    height: 10px;
+    /* background: transparent; */
+    border-color: #ccc;
+    /*padding: 12px;  Some padding   */
+    border: 1px solid #ccc; /* Gray border */
+    border-radius: 4px;
+    font-family: 'Exo', sans-serif;
+    font-size: 12px;
+    font-weight: 400;
+    margin: 0px 0px 15px 0px
+    /*padding: 4px;*/
 }
 
 .login input[type=button]{
@@ -82,6 +103,7 @@ a {
     align-content: center;
     align-self: center;
 }
+
 
 /* The sidebar menu */
 .sidenav {
@@ -116,6 +138,16 @@ a {
     flex-direction: column;
     width: 100vh;
     align-items: center;
+}
+.footer{
+/*    display: flex;
+    flex-direction: column;
+    width: 100vh;
+    align-items: center; */
+    position:absolute;
+   bottom:0;
+   width:100%;
+   height:60px;   /* Height of the footer */
 }
 
 /* On smaller screens, where height is less than 450px, change the style of the sidebar (less padding and a smaller font size) */
@@ -209,8 +241,9 @@ ul#customSelectable li {
     background: red;
     color: white;
     width: 500px;
+
     /* padding-left: 30%; */
-    height: 20%;
+    /*height: 20%;*/
     display: table-cell;
     vertical-align: middle;
 }

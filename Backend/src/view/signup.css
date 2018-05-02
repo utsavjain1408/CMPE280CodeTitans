@@ -25,6 +25,12 @@ h1 , h2{
 /*fieldset{
     border: 0;
 }*/
+body{
+    position: relative;
+    width: 80%;
+}
+.ui-accordion-content{
+}
 button{
     background-color: #4CAF50; /* Green */
     border: none;
@@ -36,6 +42,16 @@ button{
     font-size: 16px;
     width:50%;
     cursor: pointer;
+    margin: 25px 50px 75px 10px;
+}
+ a{
+    margin: 25px 50px 75px 10px;
+}
+#accordion{
+    width: 140%;
+}
+#accordion-resizer{
+    align-content: center;
 }
 .left{
     float: left;
@@ -45,22 +61,31 @@ button{
     float:right;
     width:50%;
  }
+ #month{
+    float: left;
+    width:18%;
+ }
+ #year{
+    float: center;
+    width:18%;
+ }
+
  .full{
     float:left;
     width:100%;
  }
 .card{
-    width:8%;
+    width:5%;
     margin-left:5px;
 }
 #cvv{
-        width:20%;
+    width:18%;
     margin-left:5px;
+    float: right;
 }
 
 label{
     text-align: right;
-    font-weight: bold;
 }
 
 .year,.month{
@@ -69,18 +94,29 @@ label{
 }
 fieldset
 {
-    max-width: 90%;
+    max-width: 95%;
     border-color: white;
+}
+#location{
+    height:150px !important;
+}
+#card{
+    height:120px !important;
 }
 #accordion-resizer {
     padding: 10px;
     width: 650px;
-    height: 220px;
   }
 /*.initiallyHidden { 
     display: none; 
 }
 */
+  #accordion-resizer {
+    padding: 10px;
+    width: 500px;
+    height: 50px;
+  }
+
 /*.SignUp
 {
     padding: 15px 20px 15px 20px;

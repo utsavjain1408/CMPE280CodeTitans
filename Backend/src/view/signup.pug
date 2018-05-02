@@ -3,100 +3,91 @@ extends layout
 block content
     style
         include signup.css
-    form(id = 'signupform' name='signupform' action='http://localhost:3000/user' method = 'post')
-        #accordion-resizer
-            #accordion
-                h2#hidename Create an Account
-                div
-                    
-                        div
-                        .left.hidename
-                            label(for='FirstName') First Name   
-                            input#fn(name='UserName.firstName', type='text', placeholder='First Name *', required)
-                        .right.hidename
-                            label(for='LastName') Last Name 
-                            input(id = 'ln' name='UserName.lastName'  type='text'  placeholder='Last Name *', required)
-                        div
-                        .left.hidename
-                            label(for='email') Email      
-                            input(id = 'email' name = 'email' type='text', placeholder='Enter Email *', pattern='^.+@.+\..{2,4}$',  title='xxxxx@xxxx.xxx', required)
-                        .right.hidename
-                            label(for='Password') Password  
-                            input(id = 'password' name='password', type='password', placeholder='Enter Password *', pattern='.{8,18}', title='Must contain at least 8 or more characters', required)
-                        div
-                        .left.hidename
-                            label(for='Phone') Phone Number
-                            input(id = 'phone' name='phoneNumber', type='tel',pattern="[0-9]{10}", placeholder='Phone Number *', title='Phone Number (Format: (999)999-9999)', required)
-                        .right.hidename
-                            label(for='date') Date of Birth
-                            input(name='date', id='datePicker', type='text', placeholder='Birthday date')
-                h2#hidelocation Location
-                div 
-                    fieldset
-                        div          
-                        .left.hidelocation
-                            label(for='address')  Address 
-                            input(id = 'addline1', name = 'address.line1', type='text', placeholder='123 Main St.')
-                        .right.hidelocation
-                            label City  
-                            input(id = 'city', name = 'address.city', type='text', placeholder='City')
-                        div
-                        .left.hidelocation
-                            label State  
-                            input(id = 'state', name = 'address.state', type='text', placeholder='State')
-                        .right.hidelocation
-                            label Zip Code
-                            input(id = 'zip' , name = 'address.zip', type="text", placeholder="Enter Zip Code", pattern="[0-9]{5}",  title="Zip code(format : 99999 )", required='')
-                h2#hidecard Credit Card(Optional)
-                div    
-                    fieldset
+    .body
+        form(id = 'signupform' name='signupform' action='http://localhost:3000/user' method = 'post')
+            #accordion-resizer
+                #accordion
+                    h3#hidename Create an Account
+                    .login
                             div
-                            .full.hidecard.initiallyHidden
-                                label(for='card') Card Number
-                                
-                                    input(class='card', name='card1', type='text', placeholder='9999', size='4', onkeyup='autotab(this, document.card.cardtwo)', pattern='[0-9]{4}', maxlength='4')
-                                    input(class='card', name='cardtwo', type='text', placeholder='9999', size='4', onkeyup='autotab(this, document.sampleform.card3)', pattern='[0-9]{4}', maxlength='4') 
-                                    input(class='card', name='card3', type='text', placeholder='9999', pattern='[0-9]{4}', size='4', onkeyup='autotab(this, document.sampleform.card4)', maxlength='4') 
-                                    input(class='card', name='card4', type='text', placeholder='9999', pattern='[0-9]{4}', size='4', maxlength='4')       
+                            .left
+                                label(for='FirstName') First Name   
+                                input#fn(name='UserName.firstName', type='text', placeholder='First Name *', required)
+                            .right
+                                label(for='LastName') Last Name 
+                                input(id = 'ln' name='UserName.lastName'  type='text'  placeholder='Last Name *', required)
                             div
-                            .left.hidecard.initiallyHidden
-                                .month
-                                  label(for='month') Month  
-                                  select(name='Month')
-                                    option(value='january') January
-                                    option(value='february') February
-                                    option(value='march') March
-                                    option(value='april') April
-                                    option(value='may') May
-                                    option(value='june') June
-                                    option(value='july') July
-                                    option(value='august') August
-                                    option(value='september') September
-                                    option(value='october') October
-                                    option(value='november') November
-                                    option(value='december') December
-                            .right.hidecard.initiallyHidden
-                                .year
-                                  span(style='font-weight:bold') Year    
-                                  select(name='Year')
-                                    option(value='2018') 2018
-                                    option(value='2019') 2019
-                                    option(value='2020') 2020
-                                    option(value='2021') 2021
-                                    option(value='2022') 2022
-                                    option(value='2023') 2023
-                                    option(value='2024') 2024
-                            br        
-                            .hidecard.initiallyHidden
-                                label(for='cvv') CVV  
-                                input(id='cvv', name='cvv', type='text', placeholder='CVV') 
+                            .left
+                                label(for='email') Email      
+                                input(id = 'email' name = 'email' type='text', placeholder='Enter Email *', pattern='^.+@.+\..{2,4}$',  title='xxxxx@xxxx.xxx', required)
+                            .right
+                                label(for='Password') Password  
+                                input(id = 'password' name='password', type='password', placeholder='Enter Password *', pattern='.{8,18}', title='Must contain at least 8 or more characters', required)
+                            div
+                            .left.hidename
+                                label(for='Phone') Phone Number
+                                input(id = 'phone' name='phoneNumber', type='tel',pattern="[0-9]{10}", placeholder='Phone Number *', title='Phone Number (Format: (999)999-9999)', required)
+                            .right.hidename
+                                label(for='date') Date of Birth
+                                input(name='date', id='datePicker', type='text', placeholder='Birthday date')
+                    h2#hidelocation Location
+                    .login#location
+                            div          
+                            .left
+                                label(for='email')  Address                
+                                input(id = 'addline1', name = 'address.line1', type='text', placeholder='123 Main St.')
+                            .right
+                                label(for='email') City              
+                                input(id = 'city', name = 'address.city', type='text', placeholder='City')
+                            div
+                            .left
+                                label(for='email') State      
+                                input(id = 'state', name = 'address.state', type='text', placeholder='State')
+                            .right
+                                label(for='email') Zip Code      
+                                input(id = 'zip' , name = 'address.zip', type="text", placeholder="Enter Zip Code", pattern="[0-9]{5}",  title="Zip code(format : 99999 )", required='')
+                    h2#hidecard Credit Card(Optional)
+                    #card
+                        .hidecard.initiallyHidden
+                            | Card Number
+                            input(class='card', name='card1', type='text', placeholder='9999', size='4', onkeyup='autotab(this, document.card.cardtwo)', pattern='[0-9]{4}', maxlength='4')
+                            input(class='card', name='cardtwo', type='text', placeholder='9999', size='4', onkeyup='autotab(this, document.sampleform.card3)', pattern='[0-9]{4}', maxlength='4') 
+                            input(class='card', name='card3', type='text', placeholder='9999', pattern='[0-9]{4}', size='4', onkeyup='autotab(this, document.sampleform.card4)', maxlength='4') 
+                            input(class='card', name='card4', type='text', placeholder='9999', pattern='[0-9]{4}', size='4', maxlength='4')  
+                        br     
+                        .hidecard.initiallyHidden
+                            | Month 
+                            select(name='Month')
+                                option(value='january') January
+                                option(value='february') February
+                                option(value='march') March
+                                option(value='april') April
+                                option(value='may') May
+                                option(value='june') June
+                                option(value='july') July
+                                option(value='august') August
+                                option(value='september') September
+                                option(value='october') October
+                                option(value='november') November
+                                option(value='december') December
 
-            p
-                #terms(style='display:none;')
-                    | we don't have terms and conditions right now!!
-                a#showTerms(href='#') Show Terms & Conditions    
-        
-            br
-            button(type='submit', onclick='')  Create Account
-            p
-        
+                            p      Year  
+                              select(name='Year')
+                                option(value='2018') 2018
+                                option(value='2019') 2019
+                                option(value='2020') 2020
+                                option(value='2021') 2021
+                                option(value='2022') 2022
+                                option(value='2023') 2023
+                                option(value='2024') 2024
+                                
+                            p      CVV 
+                                input(id='cvv', name='cvv', type='text', placeholder='CVV', pattern='[0-9]{3}', size='4', maxlength='3') 
+
+                p
+                    #terms(style='display:none;')
+                        | we don't have terms and conditions right now!!
+                    a#showTerms(href='#') Show Terms & Conditions    
+                br
+                button(type='submit', onclick='')  Create Account
+            
