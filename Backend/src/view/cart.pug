@@ -11,38 +11,50 @@ block content
         a(href='http://localhost:3050/contactUs') Contact Us
         a(href='http://localhost:3050/logout') Log Out
 
+    if products.length >= 1 
+        #w
+           
+            h1 Titan Pizza Shopping Cart
+        #page
+            table#cart
+                thead
+                    tr
+                        th.first Photo
+                        th.second Pizza
+                        th.third Qty
+                        th.fourth Price
+                        th.fifth  
+                tbody
+                    // shopping cart contents
+                    each product in products
+                        tr.productitm
+                            td
+                                img.thumb(src='http://' + product.image)
+                            td #{product.title}: #{product.topping}
+                            td #{product.qty}
+                            td #{product.price}
+                            td
+                                span.remove
+                                    a(href='/remove/'+ product.id)
+                                        img(src='http://localhost:3050/static/trash.png', alt='X')
+                       
+                            
+                            
+                    tr.totalprice
+                        td.light Total:
+                        td(colspan='2')  
+                        td(colspan='2')
+                            span.thick #{totalPrice}
+                    
+                    tr.checkoutrow
+                        td.checkout(colspan='5')
+                            a(href='/empty')
+                                button#submitbtn Empty Cart
 
-    #w
-      header#title
-        h1 Titan Pizza Shopping Cart
-      #page
-        table#cart
-          thead
-            tr
-              th.first Photo
-              th.second Pizza
-              th.third Qty
-              th.fourth Price
-              th.fifth  
-          tbody
-            // shopping cart contents
-            each product in products
-                tr.productitm
-                    td
-                        img.thumb(src='http://localhost:3050/static/Margherita.png')
-                    td #{product.title}
-                    td #{product.qty}
-                    td #{product.price}
-                    td
-                        span.remove
-                            img(src='http://localhost:3050/static/trash.png', alt='X')
+                    // checkout btn
+                    tr.checkoutrow
+                        td.checkout(colspan='5')
+                            button#submitbtn Place Order Now!
 
-            tr.totalprice
-                td.light Total:
-                td(colspan='2')  
-                td(colspan='2')
-                    span.thick #{totalPrice}
-            // checkout btn
-            tr.checkoutrow
-                td.checkout(colspan='5')
-                    button#submitbtn Place Order Now!
+    else
+        h2 No Items In Cart

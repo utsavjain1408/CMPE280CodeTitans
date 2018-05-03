@@ -151,8 +151,8 @@ var path = require('path')
 
         app.post('/shopping_cart', function(req, res, next) {
             
-            // product_id = req.body.id;
-            var product_id = 2;
+            // product_id = req.body.id;          
+            var product_id = 1;
             var cart = new Cart(req.session.cart ? req.session.cart : {});
             cart.add(product_id);
             req.session.cart = cart;
@@ -160,7 +160,21 @@ var path = require('path')
             res.redirect('/pizza');
 
         });
+
         
+        app.post('/customize_shopping_cart', function(req, res, next) {
+            
+            var product_id = req.body.id;          
+            var product_topping = req.body.topping;
+            var cart = new Cart(req.session.cart ? req.session.cart : {});
+            console.log(req.body.topping);
+            cart.customize_add(product_id, product_topping);
+            req.session.cart = cart;
+            console.log(req.session.cart);
+            res.redirect('/pizza');
+
+        });
+
         app.get('/shopping_cart', function(req, res, next) {
             if (!req.session.cart) {
             return res.render('cart', {
@@ -180,8 +194,17 @@ var path = require('path')
             var productId = req.params.id;
             var cart = new Cart(req.session.cart ? req.session.cart : {});
         
-            cart.remove(productId);
+            cart.removeItem(productId);
             req.session.cart = cart;
-            res.redirect('/cart');
+            res.redirect('/shopping_cart');
+        });
+
+        app.get('/empty', function(req, res, next) {
+            if (req.session.cart) {
+                req.session.cart.items = {};
+                req.session.cart.totalQty = 0;
+                req.session.cart.totalPrice = 0;
+            }
+            res.redirect('/shopping_cart');
         });
     };
