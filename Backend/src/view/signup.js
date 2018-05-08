@@ -1,7 +1,6 @@
 $(init);
 
 function init(){
-	$("#datePicker").datepicker();
 	$('#showTerms').click(function(){
         $('#terms').dialog({modal:true});   
     });
