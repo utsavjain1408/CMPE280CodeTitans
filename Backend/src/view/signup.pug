@@ -34,16 +34,22 @@ block content
                     .login#location
                             div          
                             .left
-                                label(for='email')  Address                
+                                label(for='email')  Address 1                 
                                 input(id = 'addline1', name = 'address.line1', type='text', placeholder='123 Main St.')
                             .right
-                                label(for='email') City              
-                                input(id = 'city', name = 'address.city', type='text', placeholder='City')
+                                label(for='email')  Address 2               
+                                input(id = 'addline2', name = 'address.line2', type='text', placeholder='Appartment num')
+
                             div
                             .left
+                                label(for='email') City              
+                                input(id = 'city', name = 'address.city', type='text', placeholder='City')                            
+
+                            .right
                                 label(for='email') State      
                                 input(id = 'state', name = 'address.state', type='text', placeholder='State')
-                            .right
+                            div
+                            .left    
                                 label(for='email') Zip Code      
                                 input(id = 'zip' , name = 'address.zip', type="text", placeholder="Enter Zip Code", pattern="[0-9]{5}",  title="Zip code(format : 99999 )", required='')
                     h2#hidecard Credit Card(Optional)
@@ -71,7 +77,7 @@ block content
                                 option(value='november') November
                                 option(value='december') December
 
-                            p   Year&nbsp
+                            p   &nbsp&nbsp&nbspYear&nbsp
                               select(name='Year')
                                 option(value='2018') 2018
                                 option(value='2019') 2019
@@ -81,7 +87,7 @@ block content
                                 option(value='2023') 2023
                                 option(value='2024') 2024
                                 
-                            p   CVV&nbsp
+                            p   &nbsp&nbsp&nbsp&nbsp&nbspCVV&nbsp&nbsp
                                 input(id='cvv', name='cvv', type='text', placeholder='CVV', pattern='[0-9]{3}', size='4', maxlength='3') 
 
                 p
