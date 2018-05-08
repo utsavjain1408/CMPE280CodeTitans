@@ -156,7 +156,7 @@ var path = require('path')
             var cart = new Cart(req.session.cart ? req.session.cart : {});
             cart.add(product_id);
             req.session.cart = cart;
-            console.log(req.session.cart);
+            console.log(req.body);
             res.redirect('/pizza');
 
         });

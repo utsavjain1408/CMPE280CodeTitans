@@ -84,8 +84,14 @@ button{
     float: right;
 }
 
+p, label  {
+    color: rgb(22, 21, 21);
+    text-shadow: #fff;
+    display: inline-block;
+}
 label{
-    text-align: right;
+    display: block;
+    float: left;
 }
 
 .year,.month{

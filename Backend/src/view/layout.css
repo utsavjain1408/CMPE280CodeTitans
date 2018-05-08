@@ -24,12 +24,8 @@ legend {
 p, label  {
     color: rgb(22, 21, 21);
     text-shadow: #fff;
-    display: inline-block;
 }
-label{
-    display: block;
-    float: left;
-}
+
 a {
     color: rgb(8, 16, 255);
     font-weight: 600;
