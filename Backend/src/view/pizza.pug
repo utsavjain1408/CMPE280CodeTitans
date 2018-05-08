@@ -13,64 +13,97 @@ block content
         a(href='http://localhost:3050/contactUs') Contact Us
         a(href='http://localhost:3050/logout') Log Out
 
-    div(id='pizzadialog', style='display:none') 
-        div(id='customDialogDiv')
-            legend Choose a Size: 
-            input#radioSize(type='radio', name='radioSize')
-            label(for='radioSize') Regular $4.50
-        div(id='dialogAddToCartButton', class="addToCartButton")
-            button Add To Cart
-        
+    div(id='margheritapizzadialog', style='display:none') 
+        form(id = 'customDialogform' action='http://localhost:3050/shopping_cart' method = 'post')
+            div(id='customDialogDiv')
+                legend Choose a Size: 
+                input#size(type='radio', name='size' value='Margherita Regular')
+                label(for='size') Regular $4.50
+            div(class="addToCartButton")
+                button(type="submit") Add To Cart
+    
+    div(id='greekgardenpizzadialog', style='display:none') 
+        form(id = 'customDialogform' action='http://localhost:3050/shopping_cart' method = 'post')
+            div(id='customDialogDiv')
+                legend Choose a Size: 
+                input#size(type='radio', name='size' value='Greek Garden Regular')
+                label(for='size') Regular $4.50
+            div(class="addToCartButton")
+                button(type="submit") Add To Cart
+    
+    div(id='familyfavoritepizzadialog', style='display:none') 
+        form(id = 'customDialogform' action='http://localhost:3050/shopping_cart' method = 'post')
+            div(id='customDialogDiv')
+                legend Choose a Size: 
+                input#size(type='radio', name='size' value='Family Favorite Regular')
+                label(for='size') Regular $4.50
+            div(class="addToCartButton")
+                button(type="submit") Add To Cart
+    
+    div(id='signaturepizzadialog', style='display:none') 
+        form(id = 'customDialogform' action='http://localhost:3050/shopping_cart' method = 'post')
+            div(id='customDialogDiv')
+                legend Choose a Size: 
+                input#size(type='radio', name='size' value='Signature - Code Titan Regular')
+                label(for='size') Regular $4.50
+            div(class="addToCartButton")
+                button(type="submit") Add To Cart
        
     div(id='customDialog', style='display:none') Make your Custom Pizza 
-        div(id='customDialogDiv')
-            legend Sauce: 
-            input#radioCustomSauce(type='radio', name='radioCustomSauce')
-            label(for='radioCustomSauce') Light
-            input#radio-2(type='radio', name='radioCustomSauce')
-            label(for='radioCustomSauce') Medium
-            input#radio-2(type='radio', name='radioCustomSauce')
-            label(for='radioCustomSauce') Extra
-        div(id='customDialogDiv')
-            legend Size: 
-            input#radio-3(type='radio', name='radioCustomSize')
-            label(for='radioCustomSize') Regular
-        
-        div(id='customDialogDiv')
-            legend Vegetable: 
-            input#checkbox-1(type='checkbox', name='checkboxCustomVegetable_1')
-            label(for='checkboxCustomVegetable_1') Spinach
-            input#checkbox-2(type='checkbox', name='checkboxCustomVegetable_2')
-            label(for='checkboxCustomVegetable_2') Mushroom
-            input#checkbox-3(type='checkbox', name='checkboxCustomVegetable_3')
-            label(for='checkboxCustomVegetable_3') Tomato
-            input#checkbox-4(type='checkbox', name='checkboxCustomVegetable_4')
-            label(for='checkboxCustomVegetable_4') Onion
+        form(id = 'customDialogform' action='http://localhost:3050/shopping_cart' method = 'post')
+            div(id='customDialogDiv')
+                legend Sauce: 
+                input#sauce(type='radio', name='sauce' value="Light")
+                label(for='sauce') Light
+                input#sauce(type='radio', name='sauce' value="Medium")
+                label(for='sauce') Medium
+                input#sauce(type='radio', name='sauce' value="Extra")
+                label(for='sauce') Extra
+            div(id='customDialogDiv')
+                legend Size: 
+                input#size(type='radio', name='size' value="Regular")
+                label(for='size') Regular
+                input#size(type='radio', name='size' value="Medium")
+                label(for='size') Medium
+                input#size(type='radio', name='size' value="Large")
+                label(for='size') Large
+                
             
-       
-        div(id='customDialogDiv')
-            legend Meat: 
-            input#checkbox-1(type='checkbox', name='checkboxCustomMeat_1')
-            label(for='checkboxCustomMeat_1') Beef            
-            input#checkbox-2(type='checkbox', name='checkboxCustomMeat_2')
-            label(for='checkboxCustomMeat_2') Chicken
-            input#checkbox-3(type='checkbox', name='checkboxCustomMeat_3')
-            label(for='checkboxCustomMeat_3') Bacon
-            input#checkbox-4(type='checkbox', name='checkboxCustomMeat_4')
-            label(for='checkboxCustomMeat_4') Sausage
+            div(id='customDialogDiv')
+                legend Vegetable: 
+                input#Vegetable(type='checkbox', name='Vegetable' value='Spinach')
+                label(for='Vegetable') Spinach
+                input#Vegetable(type='checkbox', name='Vegetable' value='Mushroom')
+                label(for='Vegetable') Mushroom
+                input#Vegetable(type='checkbox', name='Vegetable' value='Tomato')
+                label(for='Vegetable') Tomato
+                input#Vegetable(type='checkbox', name='Vegetable' value='Onion')
+                label(for='Vegetable') Onion
+                
+        
+            div(id='customDialogDiv')
+                legend Meat: 
+                input#checkbox-1(type='checkbox', name='Meat' value='Beef')
+                label(for='Meat') Beef            
+                input#checkbox-2(type='checkbox', name='Meat' value='Chicken')
+                label(for='Meat') Chicken
+                input#checkbox-3(type='checkbox', name='Meat' value='Bacon')
+                label(for='Meat') Bacon
+                input#checkbox-4(type='checkbox', name='Meat' value='Sausage')
+                label(for='Meat') Sausage
 
-        div(id='customDialogDiv')
-            legend Cheese: 
-            input#checkbox-1(type='checkbox', name='checkboxCustomCheese_1')
-            label(for='checkboxCustomCheese_1') Feta Cheese
-            input#checkbox-2(type='checkbox', name='checkboxCustomCheese_2')
-            label(for='checkboxCustomCheese_2') Parmesan Cheese
-            input#checkbox-3(type='checkbox', name='checkboxCustomCheese_3')
-            label(for='checkboxCustomCheese_3') Mozzarella
-            input#checkbox-4(type='checkbox', name='checkboxCustomCheese_4')
-            label(for='checkboxCustomCheese_4') Goat Cheese
-        div(id='dialogCustomAddToCartButton', class="addToCartButton")
-            button Add To Cart
+            div(id='customDialogDiv')
+                legend Cheese: 
+                input#checkbox-1(type='checkbox', name='Cheese' value='Feta Cheese')
+                label(for='Cheese') Feta Cheese
+                input#checkbox-2(type='checkbox', name='Cheese' value='Parmesan Cheese')
+                label(for='Cheese') Parmesan Cheese
+                input#checkbox-3(type='checkbox', name='Cheese' value='Mozzarella')
+                label(for='Cheese') Mozzarella
+                input#checkbox-4(type='checkbox', name='Cheese' value='Goat Cheese')
+                label(for='Cheese') Goat Cheese
+            div(class="addToCartButton")
+                button(type="submit") Add To Cart
     
     h1 Specially Crafted Titan Pizza
     #tabs
@@ -106,12 +139,33 @@ block content
         $( function() {
             $( "#selectable" ).selectable({
                  selected: function( event, ui ) {
-                     if(ui.selected.id == 0) {
-                        $('#customDialog').dialog();
-                     } else {
-                         //href='http://localhost:3050/static/south_of_the_border.html'
-                         $('#pizzadialog').load(ui.selected.href);
-                         $('#pizzadialog').dialog({
+                    if (ui.selected.id == 1) {
+                         $('#margheritapizzadialog').load(ui.selected.href);
+                         $('#margheritapizzadialog').dialog({
+                            title: ui.selected.textContent,
+                            width: "30%",
+                            closeText: "",
+                            resizable: "false"
+                            }).dialog("open");
+                     } else if (ui.selected.id == 2) {
+                         $('#greekgardenpizzadialog').load(ui.selected.href);
+                         $('#greekgardenpizzadialog').dialog({
+                            title: ui.selected.textContent,
+                            width: "30%",
+                            closeText: "",
+                            resizable: "false"
+                            }).dialog("open");
+                     } else if (ui.selected.id == 3) {
+                         $('#familyfavoritepizzadialog').load(ui.selected.href);
+                         $('#familyfavoritepizzadialog').dialog({
+                            title: ui.selected.textContent,
+                            width: "30%",
+                            closeText: "",
+                            resizable: "false"
+                            }).dialog("open");
+                     } else if (ui.selected.id == 4) {
+                         $('#signaturepizzadialog').load(ui.selected.href);
+                         $('#signaturepizzadialog').dialog({
                             title: ui.selected.textContent,
                             width: "30%",
                             closeText: "",
