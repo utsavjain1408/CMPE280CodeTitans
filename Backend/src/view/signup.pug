@@ -29,7 +29,7 @@ block content
                                 input(id = 'phone' name='phoneNumber', type='tel',pattern="[0-9]{10}", placeholder='Phone Number *', title='Phone Number (Format: (999)999-9999)', required)
                             .right.hidename
                                 label(for='date') Date of Birth
-                                input(name='date', id='datePicker', type='text', placeholder='Birthday date')
+                                input(name='date', id='datePicker', type='date', placeholder='Birthday date')
                     h2#hidelocation Location
                     .login#location
                             div          
@@ -56,7 +56,7 @@ block content
                             input(class='card', name='card4', type='text', placeholder='9999', pattern='[0-9]{4}', size='4', maxlength='4')  
                         br     
                         .hidecard.initiallyHidden
-                            | Month 
+                            p Month&nbsp
                             select(name='Month')
                                 option(value='january') January
                                 option(value='february') February
@@ -71,7 +71,7 @@ block content
                                 option(value='november') November
                                 option(value='december') December
 
-                            p      Year  
+                            p   Year&nbsp
                               select(name='Year')
                                 option(value='2018') 2018
                                 option(value='2019') 2019
@@ -81,13 +81,15 @@ block content
                                 option(value='2023') 2023
                                 option(value='2024') 2024
                                 
-                            p      CVV 
+                            p   CVV&nbsp
                                 input(id='cvv', name='cvv', type='text', placeholder='CVV', pattern='[0-9]{3}', size='4', maxlength='3') 
 
                 p
                     #terms(style='display:none;')
                         | we don't have terms and conditions right now!!
-                    a#showTerms(href='#') Show Terms & Conditions    
+                    input#agree(type='checkbox', name='checkbox', value='check')
+                    |  Accept our&nbsp
+                    a#showTerms(href='#') Terms & Conditions    
                 br
                 button(type='submit', onclick='')  Create Account
             
