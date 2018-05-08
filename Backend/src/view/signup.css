@@ -25,12 +25,6 @@ h1 , h2{
 /*fieldset{
     border: 0;
 }*/
-body{
-    position: relative;
-    width: 80%;
-}
-.ui-accordion-content{
-}
 button{
     background-color: #4CAF50; /* Green */
     border: none;
@@ -41,17 +35,7 @@ button{
     display: inline-block;
     font-size: 16px;
     width:50%;
-    cursor: pointer;
     margin: 25px 50px 75px 10px;
-}
- a{
-    margin: 25px 50px 75px 10px;
-}
-#accordion{
-    width: 140%;
-}
-#accordion-resizer{
-    align-content: center;
 }
 .left{
     float: left;
@@ -61,6 +45,15 @@ button{
     float:right;
     width:50%;
  }
+ .full{
+    float:left;
+    width:100%;
+ }
+.card{
+    width:8%;
+    margin-left:5px;
+}
+
  #month{
     float: left;
     width:18%;
@@ -69,6 +62,11 @@ button{
     float: center;
     width:18%;
  }
+ #cvv{
+    width:18%;
+    /*margin-left:5px;*/
+    float: right;
+}
 
  .full{
     float:left;
@@ -78,20 +76,69 @@ button{
     width:5%;
     margin-left:5px;
 }
-#cvv{
-    width:18%;
-    margin-left:5px;
-    float: right;
+input[type=checkbox]{
+    width:10px;
 }
 
-p, label  {
-    color: rgb(22, 21, 21);
-    text-shadow: #fff;
-    display: inline-block;
+#location{
+    height:150px !important;
 }
+#card{
+    height:130px !important;
+}
+.login input[type=text],
+.login input[type=password],
+.login input[type=tel],
+.login input[type=date],
+.cvv p input[type=text]{
+    width: 250px;
+    height: 20px;
+    /* background: transparent; */
+    padding: 12px; /* Some padding */  
+    border-radius: 4px;
+    font-family: 'Exo', sans-serif;
+    font-size: 12px;
+    font-weight: 400;
+    padding: 4px;
+}
+
+#card input[type=text]{
+    width: 80px;
+    height: 20px;
+    /* background: transparent; */
+    padding: 12px; /* Some padding */  
+    border-radius: 4px;
+    font-family: 'Exo', sans-serif;
+    font-size: 12px;
+    font-weight: 400;
+    padding: 4px;
+    margin: 0px 0px 0px 18px
+}
+
+
+.login input[type=button]{
+    margin: 10px;
+}
+
+.login p{ 
+    color : rgb(8, 16, 255);
+    font-weight: 600;
+    font-size: 18px;
+}
+
+.login input[type=text]:focus{
+    outline: none;
+    border: 1px solid rgba(12, 0, 0, 0.925);
+}
+
+#cvv{
+        width:20%;
+    margin-left:5px;
+}
+
 label{
-    display: block;
-    float: left;
+    text-align: right;
+    font-weight: bold;
 }
 
 .year,.month{
@@ -100,29 +147,18 @@ label{
 }
 fieldset
 {
-    max-width: 95%;
+    max-width: 90%;
     border-color: white;
-}
-#location{
-    height:150px !important;
-}
-#card{
-    height:120px !important;
 }
 #accordion-resizer {
     padding: 10px;
     width: 650px;
+    height: 320px;
   }
 /*.initiallyHidden { 
     display: none; 
 }
 */
-  #accordion-resizer {
-    padding: 10px;
-    width: 500px;
-    height: 50px;
-  }
-
 /*.SignUp
 {
     padding: 15px 20px 15px 20px;
