@@ -18,74 +18,10 @@ input:invalid {
 input:focus{
     border-color: blue;
 }
-
-h1 , h2{
-    color: #4CAF50;
-}
-/*fieldset{
-    border: 0;
-}*/
-button{
-    background-color: #4CAF50; /* Green */
-    border: none;
-    color: white;
-    padding: 15px 32px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
-    width:50%;
-    margin: 25px 50px 75px 10px;
-}
-.left{
-    float: left;
-    width:50%;
-}
-.right{
-    float:right;
-    width:50%;
- }
- .full{
-    float:left;
-    width:100%;
- }
-.card{
-    width:8%;
-    margin-left:5px;
-}
-
- #month{
-    float: left;
-    width:18%;
- }
- #year{
-    float: center;
-    width:18%;
- }
- #cvv{
-    width:18%;
-    /*margin-left:5px;*/
-    float: right;
-}
-
- .full{
-    float:left;
-    width:100%;
- }
-.card{
-    width:5%;
-    margin-left:5px;
-}
 input[type=checkbox]{
     width:10px;
 }
 
-#location{
-    height:150px !important;
-}
-#card{
-    height:130px !important;
-}
 .login input[type=text],
 .login input[type=password],
 .login input[type=tel],
@@ -102,43 +38,72 @@ input[type=checkbox]{
     padding: 4px;
 }
 
-#card input[type=text]{
-    width: 80px;
-    height: 20px;
-    /* background: transparent; */
-    padding: 12px; /* Some padding */  
-    border-radius: 4px;
-    font-family: 'Exo', sans-serif;
-    font-size: 12px;
-    font-weight: 400;
-    padding: 4px;
-    margin: 0px 0px 0px 18px
+h1 , h2{
+    color: #4CAF50;
+}
+/*fieldset{
+    border: 0;
+}*/
+body{
+    position: relative;
+    width: 80%;
+}
+button{
+    background-color: #4CAF50; /* Green */
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    width:50%;
+    cursor: pointer;
+    margin: 25px 50px 75px 10px;
+}
+ a{
+    margin: 25px 50px 75px 10px;
 }
 
-
-.login input[type=button]{
-    margin: 10px;
+.left{
+    float: left;
+    width:50%;
 }
+.right{
+    float:right;
+    width:50%;
+ }
+ #month{
+    float: left;
+    width:18%;
+ }
+ #year{
+    float: center;
+    width:18%;
+ }
 
-.login p{ 
-    color : rgb(8, 16, 255);
-    font-weight: 600;
-    font-size: 18px;
-}
-
-.login input[type=text]:focus{
-    outline: none;
-    border: 1px solid rgba(12, 0, 0, 0.925);
-}
-
-#cvv{
-        width:20%;
+ .full{
+    float:left;
+    width:100%;
+ }
+.card{
+    width:5%;
     margin-left:5px;
 }
+#cvv{
+    width:18%;
+    margin-left:5px;
+    float: right;
+}
 
+p, label  {
+    color: rgb(22, 21, 21);
+    text-shadow: #fff;
+    display: inline-block;
+}
 label{
-    text-align: right;
-    font-weight: bold;
+    display: block;
+    float: left;
 }
 
 .year,.month{
@@ -147,18 +112,27 @@ label{
 }
 fieldset
 {
-    max-width: 90%;
+    max-width: 95%;
     border-color: white;
 }
-#accordion-resizer {
-    padding: 10px;
-    width: 650px;
-    height: 320px;
-  }
+#location{
+    height:150px !important;
+}
+#card{
+    height:120px !important;
+}
+
 /*.initiallyHidden { 
     display: none; 
 }
 */
+  #accordion-resizer {
+    padding: 10px;
+    width: 650px;
+    height: 280px;
+
+  }
+
 /*.SignUp
 {
     padding: 15px 20px 15px 20px;
