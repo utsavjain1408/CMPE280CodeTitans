@@ -1,11 +1,15 @@
 var express = require('express')
 var User = require('./models/titanuser');  
 var Cart = require('./models/cart');
-
 var path = require('path')
     'use strict';
 
-
+    var ID = function () {
+        // Math.random should be unique because of its seeding algorithm.
+        // Convert it to base 36 (numbers + letters), and grab the first 9 characters
+        // after the decimal.
+        return '_' + Math.random().toString(36).substr(2, 9);
+      };  
 
     module.exports.route = function route(app) {
         //var controllers = require('./controllers/controllers');
@@ -151,8 +155,8 @@ var path = require('path')
 
         app.post('/shopping_cart', function(req, res, next) {
             
-            // product_id = req.body.id;          
-            var product_id = 1;
+            var product_id = parseInt(req.body.size);       
+            //var product_id = 1;
             var cart = new Cart(req.session.cart ? req.session.cart : {});
             cart.add(product_id);
             req.session.cart = cart;
@@ -164,8 +168,9 @@ var path = require('path')
         
         app.post('/customize_shopping_cart', function(req, res, next) {
             
-            var product_id = req.body.id;          
-            var product_topping = req.body.topping;
+            //var product_id = 0;  
+            var product_id = ID();
+            var product_topping = req.body.sauce + "," + req.body.size + "," + req.body.Vegetable + "," + req.body.Meat + "," + req.body.Cheese;
             var cart = new Cart(req.session.cart ? req.session.cart : {});
             console.log(req.body.topping);
             cart.customize_add(product_id, product_topping);
