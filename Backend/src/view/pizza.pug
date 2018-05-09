@@ -2,9 +2,10 @@ extends layout
 
 block content
     style
-        include topping.css
+        include shoppingcart.css
     script(src="https://code.jquery.com/jquery-1.12.4.js")
     script(src="https://code.jquery.com/ui/1.12.1/jquery-ui.js")
+    
     div(class="sidenav")
         a(href='http://localhost:3050/home') Home
         a(href='http://localhost:3050/pizza') Pizza options
@@ -12,6 +13,10 @@ block content
         a(href='http://localhost:3050/pastOrder') Past Orders
         a(href='http://localhost:3050/contactUs') Contact Us
         a(href='http://localhost:3050/logout') Log Out
+
+    #cart
+        a(href='http://localhost:3050/shopping_cart')
+            img(src='http://localhost:3050/static/cart.png', alt='X')
 
     div(id='margheritapizzadialog', style='display:none') 
         form(id = 'customDialogform' action='http://localhost:3050/shopping_cart' method = 'post')
@@ -108,7 +113,7 @@ block content
                 label(for='Cheese') Goat Cheese
             div(class="addToCartButton")
                 button(type="submit") Add To Cart
-    
+
     h1 Specially Crafted Titan Pizza
     #tabs
         ul(id="selectable")
@@ -130,16 +135,7 @@ block content
             li(class="ui-widget-content", id='0') 
                 p(class="customPizzaDescription") Customize your pizza 
 
-    
     script.
-        $(document).ready(function(){
-            $("#toppiglist").accordion();
-            $(".source li").draggable({helper:"clone"});
-            $("#cart").droppable({drop:function(event,ui){
-                $("#items").append($("<li></li>").text(ui.draggable.text()));
-            }});
-            $("#cart").resizable();
-        });
         $( function() {
             $( "#selectable" ).selectable({
                  selected: function( event, ui ) {

@@ -9,7 +9,7 @@ block content
         a(href='http://localhost:3050/contactUs') Contact Us
         a(href='http://localhost:3050/logout') Log Out
     style
-        include signup.css
+        //include signup.css
         //include layout.css
     div(class="main") 
         div(class="title") Welcome to Titan Pizza, #{user.UserName.firstName}!
@@ -22,6 +22,7 @@ block content
             width: 50%;
             height: 400px;
         }
+
     script.
         function initMap() {
             var myLatLng = {lat: 37.42, lng: -121.95};
