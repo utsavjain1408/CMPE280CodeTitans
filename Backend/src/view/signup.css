@@ -48,7 +48,7 @@ body{
     position: relative;
     width: 80%;
 }
-button{
+button,#cancel{
     background-color: #4CAF50; /* Green */
     border: none;
     color: white;
@@ -60,6 +60,10 @@ button{
     width:50%;
     cursor: pointer;
     margin: 25px 50px 75px 10px;
+}
+#cancel{
+    width:180px;
+    background-color: red;
 }
 /*  a{
     margin: 25px 50px 75px 10px;
