@@ -57,7 +57,7 @@ button,#cancel{
     text-decoration: none;
     display: inline-block;
     font-size: 16px;
-    width:50%;
+    width:250px;
     cursor: pointer;
     margin: 25px 50px 75px 10px;
 }
@@ -120,7 +120,7 @@ fieldset
     border-color: white;
 }
 #location{
-    height:150px !important;
+    height:225px !important;
 }
 #card{
     height:120px !important;
