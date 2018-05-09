@@ -2,6 +2,10 @@ extends layout
 
 block content
     body
+    script(type='text/javascript').
+      $(window).load(function(){
+        $("#home").attr("href","http://localhost:3050/");
+      });
     h1 Welcome to Pizza Titans 
     .login
       form(action='/auth', method='post')

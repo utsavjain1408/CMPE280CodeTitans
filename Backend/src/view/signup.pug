@@ -3,6 +3,10 @@ extends layout
 block content
     style
         include signup.css
+    script(type='text/javascript').
+      $(window).load(function(){
+        $("#home").attr("href","http://localhost:3050/");
+      });
     .body
         form(id = 'signupform' name='signupform' action='http://localhost:3000/user' method = 'post')
             #accordion-resizer
@@ -99,4 +103,3 @@ block content
                 br
                 a#cancel(href='http://localhost:3050/')  Cancel 
                 button(type='submit', onclick='')  Create Account
-            
