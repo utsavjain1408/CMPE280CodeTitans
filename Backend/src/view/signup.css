@@ -61,9 +61,9 @@ button{
     cursor: pointer;
     margin: 25px 50px 75px 10px;
 }
- a{
+/*  a{
     margin: 25px 50px 75px 10px;
-}
+} */
 
 .left{
     float: left;
