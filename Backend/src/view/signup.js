@@ -1,6 +1,7 @@
 $(init);
 
 function init(){
+	$("#home").attr("href", "http://localhost:3050/")
 	$('#showTerms').click(function(){
         $('#terms').dialog({modal:true});   
     });
