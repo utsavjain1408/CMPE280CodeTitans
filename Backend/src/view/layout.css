@@ -1,7 +1,7 @@
 body {
     height: 100%;
     width: 100%;
-    background-color: #ffe900;
+    background-color: #fffb00c9;
     background-size: 100%;
     background-repeat: no-repeat;
     display: flex;
@@ -9,6 +9,7 @@ body {
     align-items: center;
     margin: 0;
     padding: 0;
+    background-position: center;
 }
 
 
@@ -112,6 +113,7 @@ a {
     background-color: rgb(14, 1, 1); /* Black */
     overflow-x: hidden; /* Disable horizontal scroll */
     padding-top: 20px;
+   
 }
 
 /* The navigation menu links */
@@ -121,6 +123,7 @@ a {
     font-size: 25px;
     color: #818181;
     display: block;
+    margin-bottom: -10px
 }
 
 /* When you mouse over the navigation links, change their color */
@@ -155,7 +158,9 @@ a {
 .title {
     font-size: 20px;
     padding: 30px;
-    font-family: fantasy;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: large;
+    font-weight: bold
 }
 
 .header {
@@ -234,9 +239,12 @@ ul#customSelectable li {
 }
 #customSelectable .ui-widget-content {
     border: none;
-    background: red;
-    color: white;
-    width: 500px;
+    border-radius: 25px;
+    border-style: outset;
+    background: rgba(255, 0, 0, 0.767);
+    color: rgb(42, 21, 226);
+    width: 400px;
+
 
     /* padding-left: 30%; */
     /*height: 20%;*/
@@ -245,8 +253,11 @@ ul#customSelectable li {
 }
 
 .customPizzaDescription {
-    font: 3em sans-serif;
+    font: 3em ;
     color: white;
+    font-size: larger;
+    font-style: italic;
+    
 }
 
 #customDialogDiv {

@@ -16,6 +16,7 @@ block content
     div(id='margheritapizzadialog', style='display:none') 
         form(id = 'customDialogform' action='http://localhost:3050/shopping_cart' method = 'post')
             div(id='customDialogDiv')
+                p Toppings : Tomato sauce, Mozzarella, Basil;
                 legend Choose a Size: 
                 input#size(type='radio', name='size' value= '1')
                 label(for='size') Regular $4.50
@@ -25,6 +26,7 @@ block content
     div(id='greekgardenpizzadialog', style='display:none') 
         form(id = 'customDialogform' action='http://localhost:3050/shopping_cart' method = 'post')
             div(id='customDialogDiv')
+                p Toppings: Garlic sauce,Tomatoes,Spinach,Black olives,Feta cheese, Mozzarella,Provolone cheese
                 legend Choose a Size: 
                 input#size(type='radio', name='size' value= '2')
                 label(for='size') Regular $4.50
@@ -34,6 +36,7 @@ block content
     div(id='familyfavoritepizzadialog', style='display:none') 
         form(id = 'customDialogform' action='http://localhost:3050/shopping_cart' method = 'post')
             div(id='customDialogDiv')
+                p Toppings : Red sauce, Pepperoni, Mushrooms, Tomatoes, Onion, Monterey jack, Mozzarella
                 legend Choose a Size: 
                 input#size(type='radio', name='size' value= '3')
                 label(for='size') Regular $4.50
@@ -43,6 +46,7 @@ block content
     div(id='signaturepizzadialog', style='display:none') 
         form(id = 'customDialogform' action='http://localhost:3050/shopping_cart' method = 'post')
             div(id='customDialogDiv')
+                p Toppings: Pesto sauce, Tomatoes, Spinach, Red onion, Green peppers, Banana peppers, Bacon, Mozarella
                 legend Choose a Size: 
                 input#size(type='radio', name='size' value= '4')
                 label(for='size') Regular $4.50
@@ -124,7 +128,7 @@ block content
 
         ul(id="customSelectable")
             li(class="ui-widget-content", id='0') 
-                p(class="customPizzaDescription") Custom
+                p(class="customPizzaDescription") Customize your pizza 
 
     
     script.
