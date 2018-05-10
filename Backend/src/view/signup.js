@@ -17,7 +17,6 @@ function init(){
       collapsible: true,
       autoFill:true,
     });
-    
     $(".ui-accordion-content").show();
 
 	$( "#accordion-resizer" ).resizable({
