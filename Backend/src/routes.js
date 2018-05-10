@@ -9,7 +9,7 @@ var ID = function () {
     // Convert it to base 36 (numbers + letters), and grab the first 9 characters
     // after the decimal.
     return '_' + Math.random().toString(36).substr(2, 9);
-    };  
+};  
 
     module.exports.route = function route(app) {
         //var controllers = require('./controllers/controllers');
@@ -117,30 +117,12 @@ var ID = function () {
     });
 
         //Renders the page with user’s past orders
-        // app.get('/pastOrder', function (req, res) {
-        //     console.log('Under Construction!!');
-        //     res.render('pastorder', {
-        //         title:'Welcome to Titan Pizza',
-        //     })
-        // });
-        app.get('/pastOrder', function (req, res, next) {
-            User.findById(req.session.userId)
-            .exec(function (error, user) {
-            if (error) {
-                return next(error);
-            } else {
-                if (user === null) {
-                var err = new Error('Not authorized! Go back!');
-                err.status = 400;
-                return next(err);
-                } else {
-                    res.render('pastorder', {
-                        title:'Your Titan Profile', user : user
-                    })
-                }
-            }
-        });   
-    });
+        app.get('/pastOrder', function (req, res) {
+            console.log('Under Construction!!');
+            res.render('pastorder', {
+                title:'Welcome to Titan Pizza',
+            })
+        });
         
         //Renders the page with information for contacting TitanPizza
         app.get('/contactUs', function (req, res) {
@@ -151,12 +133,28 @@ var ID = function () {
         });
 
         //Renders the page with information for TitanPizza
-        app.get('/pizza', function (req, res) {
-            console.log('Under Construction!!');
-            res.render('pizza', {
-                title:'Welcome to Titan Pizza',
-            })
+        app.get('/pizza', function (req, res, next) {
+
+            User.findById(req.session.userId)
+            .exec(function (error, user) {
+                if (error) {
+                    return next(error);
+                } else {
+                    if (user === null) {
+                    var err = new Error('Not authorized! Go back!');
+                    err.status = 400;
+                    return next(err);
+                    } else {
+
+                        console.log('Under Construction!!');
+                        res.render('pizza', {
+                            title:'Welcome to Titan Pizza', user : user
+                        })
+                    }
+                }
+            });
         });
+
 
         app.get('/logout', function (req, res, next) {
             if (req.session) {
@@ -182,7 +180,6 @@ var ID = function () {
             res.redirect('/pizza');
 
         });
-        
 
         
         app.post('/customize_shopping_cart', function(req, res, next) {
@@ -200,46 +197,34 @@ var ID = function () {
         });
 
         app.get('/shopping_cart', function(req, res, next) {
-            if (!req.session.cart) {
-            return res.render('cart', {
-                products: null
+            User.findById(req.session.userId)
+            .exec(function (error, user) {
+                if (error) {
+                    return next(error);
+                } else {
+                    if (user === null) {
+                        var err = new Error('Not authorized! Go back!');
+                        err.status = 400;
+                        return next(err);
+                    } else {
+                        if (!req.session.cart) {
+                            return res.render('cart', {
+                                products: null
+                            });
+                            }
+                            var cart = new Cart(req.session.cart);
+                            console.log(cart);
+                            res.render('cart', {
+                            title: 'Titan Pizza Shopping Cart',
+                            products: cart.generateArray(),
+                            totalPrice: cart.totalPrice,
+                            user : user
+                            })
+                    }
+                }
             });
-            }
-            var cart = new Cart(req.session.cart);
-            console.log(cart);
-            res.render('cart', {
-            title: 'Titan Pizza Shopping Cart',
-            products: cart.generateArray(),
-            totalPrice: cart.totalPrice
-            })
+
         });
-    //     app.get('/shopping_cart', function (req, res, next) {
-    //         User.findById(req.session.userId)
-    //         .exec(function (error, user) {
-    //         if (error) {
-    //             return next(error);
-    //         } else {
-    //             if (user === null) {
-    //             var err = new Error('Not authorized! Go back!');
-    //             err.status = 400;
-    //             return next(err);
-    //             } else {
-    //                 if (!req.session.cart) {
-    //                     return res.render('cart', {
-    //                         products: null
-    //                     });
-    //                     }
-    //                     var cart = new Cart(req.session.cart);
-    //                     console.log(cart);
-    //                     res.render('cart', {
-    //                     title: 'Titan Pizza Shopping Cart',
-    //                     products: cart.generateArray(),
-    //                     totalPrice: cart.totalPrice
-    //                     })
-    //             }
-    //         }
-    //     });   
-    // });
         
         app.get('/remove/:id', function(req, res, next) {
             var productId = req.params.id;
