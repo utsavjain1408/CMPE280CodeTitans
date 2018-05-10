@@ -213,7 +213,33 @@ var ID = function () {
             totalPrice: cart.totalPrice
             })
         });
-        
+    //     app.get('/shopping_cart', function (req, res, next) {
+    //         User.findById(req.session.userId)
+    //         .exec(function (error, user) {
+    //         if (error) {
+    //             return next(error);
+    //         } else {
+    //             if (user === null) {
+    //             var err = new Error('Not authorized! Go back!');
+    //             err.status = 400;
+    //             return next(err);
+    //             } else {
+    //                 if (!req.session.cart) {
+    //                     return res.render('cart', {
+    //                         products: null
+    //                     });
+    //                     }
+    //                     var cart = new Cart(req.session.cart);
+    //                     console.log(cart);
+    //                     res.render('cart', {
+    //                     title: 'Titan Pizza Shopping Cart',
+    //                     products: cart.generateArray(),
+    //                     totalPrice: cart.totalPrice
+    //                     })
+    //             }
+    //         }
+    //     });   
+    // });
         
         app.get('/remove/:id', function(req, res, next) {
             var productId = req.params.id;

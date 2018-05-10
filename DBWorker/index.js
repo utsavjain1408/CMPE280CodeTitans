@@ -28,46 +28,40 @@ app.get('/', (req, res) =>
     res.send(`Node and Express Server running on ${PORT}`)
 );
 app.post('/place_order',(req, res)=>{
-    //console.log(req.body)
     let products = req.body.Products;
     let email = req.body.email;
     let sp = products.split('},');
     let size = sp.length;
     var item = []
+    var qty=[]
+    let totalCost = req.body.totalPrice;
+    let order={}
+    let x={}
     for(var i =0;i<size-1; i++){
         sp[i]+='}';
-        // console.log(typeof sp)
-        //   console.log(JSON.parse(sp[i]));
-        //   console.log(sp[i])
-
     }
     for(var i =0;i<size; i++){
         sp[i]=String(sp[i])
         sp[i]=sp[i].replace('[','')
         sp[i]=sp[i].replace(']','')
-        // console.log(typeof sp)
           console.log(JSON.parse(sp[i]));
-        //   console.log(sp[i])
-
+          x=JSON.parse(sp[i])
+          item.push({
+            toppings:String(x.topping),
+            qty:Number(x.qty)
+          })
     }
-    
-    // console.log(typeof sp)
-
-    // console.log(String(products))
-    // console.log(sp)
-    //console.log(size)
-   
-    
-   axios.post('http://localhost:3000/order/user/'+email, sp).then(res => {
+    var TitanOrder= {}
+    order.items= item
+    TitanOrder.userID= String(email)
+    TitanOrder.order=order
+    TitanOrder.totalCost=totalCost
+   axios.post('http://localhost:3000/order/user/'+email, TitanOrder).then(res => {
         console.log(res.data);
    }).catch(console.error);
-    
-    // sp[0].pop()
-    // console.log((sp[0])[0])
-    // console.log(sp)
-    let totalPrice = req.body.totalPrice;
-    console.log("Total : "+totalPrice);
+    console.log("Total : "+totalCost);
     console.log("Email : "+email)
+    console.log(TitanOrder.order)
     res.send('http://localhost:3050/empty')
 } )
 

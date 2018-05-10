@@ -16,7 +16,7 @@ export const TitanOrderSchema = new mongoose.Schema({
       required:'Bro Phantom order will not be served.'
   },
   order:{
-        items:{
+        items:[{
             itemType:{
                 type:String,
                 enum:['pizza', 'side'],
@@ -27,19 +27,19 @@ export const TitanOrderSchema = new mongoose.Schema({
                 enum:['light','medium', 'extra'],
                 default:'medium'
             },
-            toppings: [{
+            toppings: {
                 type: String
-            }],
+            },
             size:{
                 type:String,
                 enum:['medium', 'large', 'titan'],
-                default:'mediium'
+                default:'titan'
             },
             qty:{
                 type:Number,
                 default:1
             }
-        }
+        }]
   },
   totalCost:{
       type:Number,
