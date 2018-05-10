@@ -1,13 +1,14 @@
 extends layout
 
 block content
+    body
     style
         include signup.css
     script(type='text/javascript').
       $(window).load(function(){
         $("#home").attr("href","http://localhost:3050/");
       });
-    .body
+    div
         form(id = 'signupform' name='signupform' action='http://localhost:3000/user' method = 'post')
             #accordion-resizer
                 #accordion
@@ -28,10 +29,10 @@ block content
                                 label(for='Password') Password  
                                 input(id = 'password' name='password', type='password', placeholder='Enter Password *', pattern='.{8,18}', title='Must contain at least 8 or more characters', required)
                             div
-                            .left.hidename
+                            .left
                                 label(for='Phone') Phone Number
                                 input(id = 'phone' name='phoneNumber', type='tel',pattern="[0-9]{10}", placeholder='Phone Number *', title='Phone Number (Format: (999)999-9999)', required)
-                            .right.hidename
+                            .right
                                 label(for='date') Date of Birth
                                 input(name='date', id='datePicker', type='date', placeholder='Birthday date')
                     h2#hidelocation Location
