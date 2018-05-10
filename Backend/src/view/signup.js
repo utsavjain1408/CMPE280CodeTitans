@@ -4,25 +4,25 @@ function init(){
 	$('#showTerms').click(function(){
         $('#terms').dialog({modal:true});   
     });
-    $("#hidecard").click(function(){
-    	$(".hidecard").toggle();
-	});
-    $("#hidelocation").click(function(){
-    	$(".hidelocation").toggle();
-	});
-    $("#hidename").click(function(){
-    	$(".hidename").toggle();
-	});
+ //    $("#hidecard").click(function(){
+ //    	$(".hidecard").toggle();
+	// });
+ //    $("#hidelocation").click(function(){
+ //    	$(".hidelocation").toggle();
+	// });
+ //    $("#hidename").click(function(){
+ //    	$(".hidename").toggle();
+	// });
 	$( "#accordion" ).accordion({
       collapsible: true,
       autoFill:true,
-
     });
+    
     $(".ui-accordion-content").show();
 
 	$( "#accordion-resizer" ).resizable({
       minHeight: 100,
-      minWidth: 150,
+      minWidth: 250,
       resize: function() {
         $( "#accordion" ).accordion( "refresh" );
       }
