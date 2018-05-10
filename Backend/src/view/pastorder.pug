@@ -12,5 +12,26 @@ block content
             include signup.css
             //include layout.css
     div(class="main") 
-        div(class="title") We don't have a Database right now .. So.. Please be patient to see your past orders
+        div(class="title") 
+            form(action='http://localhost:3000/past_order/utsav.jain@sjsu.edu', method='get')
+                input(id = 'submitbtn', type='submit', name='View Order!', value='ViewOrder')
             img(src=('http://localhost:3050/static/Welcome.jpg'))
+    //- div(ng-app='foobar')
+    //-     div(ng-controller='bar')
+    //-         | Response Data: {{data}} 
+    //-         br
+    //-         |            Error: {{error}}
+    //-     script.
+    //-     var myApp = angular.module('foobar', []);
+    //-     myApp.controller("bar", function ($scope, $http) {
+    //-     var onSuccess = function (data, status, headers, config) {
+    //-     $scope.data = data;
+    //-     };
+    //-     var onError = function (data, status, headers, config) {
+    //-     $scope.error = status;
+    //-     }
+    //-     var promise = $http.get("http://localhost:3000/order/user/a/utsav.jain@sjsu.edu");
+    //-     promise.success(onSuccess);
+    //-     promise.error(onError);
+    //-     });
+

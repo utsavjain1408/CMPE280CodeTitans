@@ -1,0 +1,530 @@
+<!DOCTYPE html><html><head><link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <style>body {
+    height: 100%;
+    width: 100%;
+    background-color: #fffb00c9;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+    background-position: center;
+}
+
+
+h1  {
+    color: rgba(0, 0, 0, 0.884);
+    text-shadow: #fff
+}
+
+legend {
+        color:black;
+        font-size: 18px;
+}
+p, label  {
+    color: rgb(22, 21, 21);
+    text-shadow: #fff;
+}
+
+a {
+    color: rgb(8, 16, 255);
+    font-weight: 600;
+    font-size: 18px;
+}
+
+.login{
+    align-content: center;
+    padding: 10px;
+    z-index: 2;
+
+}
+
+.login input[type=text],
+.login input[type=password],
+.login input[type=tel]{
+    width: 250px;
+    height: 20px;
+    /* background: transparent; */
+    padding: 12px; /* Some padding */  
+    border-radius: 4px;
+    font-family: 'Exo', sans-serif;
+    font-size: 12px;
+    font-weight: 400;
+    padding: 4px;
+}
+
+#card input[type=text]{
+    width: 80px;
+    height: 20px;
+    /* background: transparent; */
+    padding: 12px; /* Some padding */  
+    border-radius: 4px;
+    font-family: 'Exo', sans-serif;
+    font-size: 12px;
+    font-weight: 400;
+    padding: 4px;
+    margin: 0px 0px 0px 18px
+}
+#card p input[type=text]{
+    width: 80px;
+    height: 10px;
+    /* background: transparent; */
+    border-color: #ccc;
+    /*padding: 12px;  Some padding   */
+    border: 1px solid #ccc; /* Gray border */
+    border-radius: 4px;
+    font-family: 'Exo', sans-serif;
+    font-size: 12px;
+    font-weight: 400;
+    margin: 0px 0px 15px 0px
+    /*padding: 4px;*/
+}
+
+.login input[type=button]{
+    margin: 10px;
+}
+
+.login p{ 
+    color : rgb(8, 16, 255);
+    font-weight: 600;
+    font-size: 18px;
+}
+
+.login input[type=text]:focus{
+    outline: none;
+    border: 1px solid rgba(12, 0, 0, 0.925);
+}
+
+.logo {
+    align-content: center;
+    align-self: center;
+}
+
+
+/* The sidebar menu */
+.sidenav {
+    height: 100%; /* Full-height: remove this if you want "auto" height */
+    width: 160px; /* Set the width of the sidebar */
+    position: fixed; /* Fixed Sidebar (stay in place on scroll) */
+    z-index: 1; /* Stay on top */
+    top: 0; /* Stay at the top */
+    left: 0;
+    background-color: rgb(14, 1, 1); /* Black */
+    overflow-x: hidden; /* Disable horizontal scroll */
+    padding-top: 20px;
+   
+}
+
+/* The navigation menu links */
+.sidenav a {
+    padding: 6px 8px 6px 16px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    margin-bottom: -10px
+}
+
+/* When you mouse over the navigation links, change their color */
+.sidenav a:hover {
+    color: #f1f1f1;
+}
+
+/* Style page content */
+.main {
+    display: flex;
+    flex-direction: column;
+    width: 100vh;
+    align-items: center;
+}
+.footer{
+/*    display: flex;
+    flex-direction: column;
+    width: 100vh;
+    align-items: center; */
+    position:absolute;
+   bottom:0;
+   width:100%;
+   height:60px;   /* Height of the footer */
+}
+
+/* On smaller screens, where height is less than 450px, change the style of the sidebar (less padding and a smaller font size) */
+@media screen and (max-height: 450px) {
+    .sidenav {padding-top: 15px;}
+    .sidenav a {font-size: 18px;}
+}
+
+.title {
+    font-size: 20px;
+    padding: 30px;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: large;
+    font-weight: bold
+}
+
+.header {
+    color: rgba(0, 0, 0, 0.884);
+    text-shadow: #fff 
+}
+
+ol{display: none;}
+.drop
+    {
+    display: block;
+    }
+
+#tabs {
+    /* width: 80%;
+    display: flex;
+    flex-direction: column;
+    left: 80px; */
+    display: table;
+}
+
+#selectable .ui-selecting { 
+    background: #FECA40; 
+}
+
+#selectable .ui-selected { 
+    background: white; 
+}
+
+#selectable {     
+    list-style-type: none; 
+    margin: 0; 
+    padding-left: 0; 
+    text-align: center;
+    width: fit-content;
+}
+
+#selectable li { 
+    margin: 3px; 
+    padding: 0.4em;
+    width: fit-content;
+}
+
+ul#selectable li {
+    display: inline;
+}
+#selectable .ui-widget-content {
+    border: none;
+    background: none;
+    display: table-cell;
+    vertical-align: middle;
+}
+
+.pizzaDescription {
+    font: 1em sans-serif;
+    color: royalblue;
+}
+
+
+#customSelectable {     
+    list-style-type: none; 
+    margin-left: 15%;
+    padding-left: 0; 
+    text-align: center;
+    width: fit-content;
+}
+
+#customSelectable li { 
+    margin: 3px; 
+    padding: 0.4em;
+    width: fit-content;
+}
+
+ul#customSelectable li {
+    display: inline;
+}
+#customSelectable .ui-widget-content {
+    border: none;
+    border-radius: 25px;
+    border-style: outset;
+    background: rgba(255, 0, 0, 0.767);
+    color: rgb(42, 21, 226);
+    width: 400px;
+
+
+    /* padding-left: 30%; */
+    /*height: 20%;*/
+    display: table-cell;
+    vertical-align: middle;
+}
+
+.customPizzaDescription {
+    font: 3em ;
+    color: white;
+    font-size: larger;
+    font-style: italic;
+    
+}
+
+#customDialogDiv {
+    padding: 10px;
+    margin: 10px;
+    border: 1px solid #aaaaaa;
+}
+
+.addToCartButton {
+    padding: 10px;
+    margin: 10px;
+    flex-direction: row-reverse;
+    display: flex;
+}</style><title>  Your Titan Profile</title><link rel="stylesheet" type="text/css" href="http://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css"><script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script><script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.13/jquery-ui.min.js"></script><script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+<script src="https://code.angularjs.org/1.6.10/angular-animate.js"></script>
+    </head>
+        <body>
+                <div class="logo">
+                    <a id="home" href="http://localhost:3050/home"> 
+                        <table class="main"><tr><td><img src="http://localhost:3050/static/pizzaLogo.png">
+                    </td>
+                    <td><h1 class="header">Titan Pizza </h1></td></tr></table>
+                    </a>
+                    </div>
+                    <br><br><div class="sidenav">
+                        <a href="http://localhost:3050/home">Home</a>
+                        <a href="http://localhost:3050/pizza">Pizza options</a>
+                        <a href="http://localhost:3050/profile">Profile</a>
+                        <a href="http://localhost:3050/pastOrder">Past Orders</a>
+                        <a href="http://localhost:3050/contactUs">Contact Us</a>
+                        <a href="http://localhost:3050/logout">Log Out</a>
+                        </div>
+                        <style>/* Style inputs with type, select elements and textareas */
+input{
+    width: 60%;
+    border-color: #ccc;
+    padding: 12px; /* Some padding */  
+    border: 1px solid #ccc; /* Gray border */
+    border-radius: 4px; /* Rounded borders */
+    background: #f1f1f1; 
+    margin: 5px 0px 15px 0px;
+}
+input:valid{
+    border-color: green;
+}
+
+input:invalid {
+    border-color: red;
+}
+input:focus{
+    border-color: blue;
+}
+input[type=checkbox]{
+    width:10px;
+}
+
+.login input[type=text],
+.login input[type=password],
+.login input[type=tel],
+.login input[type=date],
+.cvv p input[type=text]{
+    width: 250px;
+    height: 20px;
+    /* background: transparent; */
+    padding: 12px; /* Some padding */  
+    border-radius: 4px;
+    font-family: 'Exo', sans-serif;
+    font-size: 12px;
+    font-weight: 400;
+    padding: 4px;
+}
+
+h1 , h2{
+    color: #4CAF50;
+}
+/*fieldset{
+    border: 0;
+}*/
+body{
+    position: relative;
+    width: 80%;
+}
+button,#cancel{
+    background-color: #4CAF50; /* Green */
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    width:250px;
+    cursor: pointer;
+    margin: 25px 50px 75px 10px;
+}
+#cancel{
+    width:180px;
+    background-color: red;
+}
+/*  a{
+    margin: 25px 50px 75px 10px;
+} */
+
+.left{
+    float: left;
+    width:50%;
+}
+.right{
+    float:right;
+    width:50%;
+ }
+ #month{
+    float: left;
+    width:18%;
+ }
+ #year{
+    float: center;
+    width:18%;
+ }
+
+ .full{
+    float:left;
+    width:100%;
+ }
+.card{
+    width:5%;
+    margin-left:5px;
+}
+#cvv{
+    width:18%;
+    margin-left:5px;
+    float: right;
+}
+
+p, label  {
+    color: rgb(22, 21, 21);
+    text-shadow: #fff;
+    display: inline-block;
+}
+label{
+    display: block;
+    float: left;
+}
+
+.year,.month{
+    padding: 12px; 
+    margin: 5px 0px 15px 0px;
+}
+fieldset
+{
+    max-width: 95%;
+    border-color: white;
+}
+#location{
+    height:225px !important;
+}
+#card{
+    height:120px !important;
+}
+
+/*.initiallyHidden { 
+    display: none; 
+}
+*/
+  #accordion-resizer {
+    padding: 10px;
+    width: 650px;
+    height: 280px;
+
+  }
+
+/*.SignUp
+{
+    padding: 15px 20px 15px 20px;
+    border: 1px solid #EFF3F6;
+    margin-bottom: 20px;
+}*/
+
+/* The sidebar menu */
+.sidenav {
+    height: 100%; /* Full-height: remove this if you want "auto" height */
+    width: 160px; /* Set the width of the sidebar */
+    position: fixed; /* Fixed Sidebar (stay in place on scroll) */
+    z-index: 1; /* Stay on top */
+    top: 0; /* Stay at the top */
+    left: 0;
+    background-color: rgb(14, 1, 1); /* Black */
+    overflow-x: hidden; /* Disable horizontal scroll */
+    padding-top: 20px;
+}
+
+/* The navigation menu links */
+.sidenav a {
+    padding: 6px 8px 6px 16px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+}
+
+/* When you mouse over the navigation links, change their color */
+.sidenav a:hover {
+    color: #f1f1f1;
+}
+
+/* Style page content */
+.main {
+    margin-left: 160px; /* Same as the width of the sidebar */
+    padding: 50px 0px 10px;
+    text-align: center;
+    vertical-align: bottom
+    position: relative;
+}
+
+/* On smaller screens, where height is less than 450px, change the style of the sidebar (less padding and a smaller font size) */
+@media screen and (max-height: 450px) {
+    .sidenav {padding-top: 15px;}
+    .sidenav a {font-size: 18px;}
+}
+
+/* Title Div Style class */
+.title {
+    font-size: 20px;
+    padding: 30px;
+    font-family: fantasy;
+}
+ol{display: none;}
+.drop
+    {
+    display: block;
+    }
+ <!--include layout.css--></style><div class="main"> </div></div> 
+
+                     <h1> Past Orders</h1>
+
+ <div ng-app="pastorder" ng-controller="past">
+        <table class="table table-striped">
+            <th>Order ID</th>
+            <th>TimeStamp </th>
+            <th>Total Price </th>
+            <th>Status </th>
+            <tr ng-repeat="x in orders">
+                <td>{{ x.orderUID }}</td>
+                <td>
+                       
+                            {{ x.TimeStamp | date:'medium'}}
+                        
+                </td>
+                <td>{{ x.totalCost }}</td>
+                <td>{{ x.status }}</td>
+            </tr>
+            
+            </table>
+</div>
+<script>
+var app = angular.module('pastorder', []);
+app.controller('past', function($scope, $http) {
+  $http.get("http://localhost:3000/order/user/a/utsav.jain@sjsu.edu")
+  .then(function(response) {
+      $scope.orders = response.data;
+      $scope.items = $scope.orders.items;
+      console.log($scope.orders.items)
+      $scope.$log = $scope.orders.items
+      $scope.statuscode = response.status;
+      $scope.statustext = response.statusText;            
+  });
+});
+</script>
+<br><br><div><footer class="main"> <p>Copyright Info: We don't own ANY  copyrights</p><p> <a href="http://localhost:3050/about">About Us</a></p><p> <a href="http://localhost:3050/career">Career</a></p></footer></div><script type="text/javascript" src="http://localhost:3050/static/signup.js"></script></body></html>

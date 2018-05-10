@@ -27,6 +27,10 @@ kitchen(app)
 app.get('/', (req, res) =>
     res.send(`Node and Express Server running on ${PORT}`)
 );
+app.get('/past_order/:email',(req,res)=>{
+    res.sendFile('/src/controllers/pastorder.html' , { root : __dirname});
+
+})
 app.post('/place_order',(req, res)=>{
     let products = req.body.Products;
     let email = req.body.email;
@@ -62,7 +66,7 @@ app.post('/place_order',(req, res)=>{
     console.log("Total : "+totalCost);
     console.log("Email : "+email)
     console.log(TitanOrder.order)
-    res.send('http://localhost:3050/empty')
+    res.redirect('http://localhost:3050/empty')
 } )
 
 app.listen(PORT, () =>

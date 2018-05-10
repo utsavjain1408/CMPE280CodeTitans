@@ -22,6 +22,7 @@ export const getActiveOrdersByUser = (req,res) =>{
           res.send(err);
         }
         console.log(order);
+        
         res.json(order);
     });
 }
