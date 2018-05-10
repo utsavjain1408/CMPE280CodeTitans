@@ -54,7 +54,13 @@ block content
                     // checkout btn
                     tr.checkoutrow
                         td.checkout(colspan='5')
-                            button#submitbtn Place Order Now!
+                            form(action='http://localhost:3000/place_order', method='post')
+                                input#products(name='Products', type='hidden', value=products)
+                                input#totalPrice(name='totalPrice', type='hidden', value=totalPrice)
+                                //- input#some(name='some', type='hidden', value=user.email)
+                                input(id = 'submitbtn', type='submit', name='Place Order!', value='Place Order')
+
+                            //- button#submitbtn Place Order Now!
 
     else
         h2 No Items In Cart

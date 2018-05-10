@@ -53,13 +53,15 @@ export const getAllOrdersByKitchen = (req,res) =>{
 
 export const createNewOrder = (req,res) =>{
     console.log(`createNewOrder called`)
-    let newOrder = new order(req.body);
-    newOrder.orderUID = uuid4(req.body)
-    newOrder.userID = req.params.userID
-    newOrder.save((err, order) => {
-    if(err){
-      res.send(err);
-    }
-    res.json(order);
-  });
+    console.log(req.body);
+    res.send('Order created!!');
+    // let newOrder = new order(req.body);
+    // newOrder.orderUID = uuid4(req.body)
+    // newOrder.userID = req.params.userID
+    // newOrder.save((err, order) => {
+    // if(err){
+    //   res.send(err);
+    // }
+    // res.json(order);
+//   });
 }

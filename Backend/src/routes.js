@@ -117,12 +117,30 @@ var ID = function () {
     });
 
         //Renders the page with user’s past orders
-        app.get('/pastOrder', function (req, res) {
-            console.log('Under Construction!!');
-            res.render('pastorder', {
-                title:'Welcome to Titan Pizza',
-            })
-        });
+        // app.get('/pastOrder', function (req, res) {
+        //     console.log('Under Construction!!');
+        //     res.render('pastorder', {
+        //         title:'Welcome to Titan Pizza',
+        //     })
+        // });
+        app.get('/pastOrder', function (req, res, next) {
+            User.findById(req.session.userId)
+            .exec(function (error, user) {
+            if (error) {
+                return next(error);
+            } else {
+                if (user === null) {
+                var err = new Error('Not authorized! Go back!');
+                err.status = 400;
+                return next(err);
+                } else {
+                    res.render('pastorder', {
+                        title:'Your Titan Profile', user : user
+                    })
+                }
+            }
+        });   
+    });
         
         //Renders the page with information for contacting TitanPizza
         app.get('/contactUs', function (req, res) {
@@ -164,6 +182,7 @@ var ID = function () {
             res.redirect('/pizza');
 
         });
+        
 
         
         app.post('/customize_shopping_cart', function(req, res, next) {
@@ -194,6 +213,7 @@ var ID = function () {
             totalPrice: cart.totalPrice
             })
         });
+        
         
         app.get('/remove/:id', function(req, res, next) {
             var productId = req.params.id;
