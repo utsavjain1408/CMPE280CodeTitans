@@ -1,5 +1,4 @@
 import mongoose from 'mongoose';
-
 const TitanKitchenSchema = new mongoose.Schema({
   KitchenUID:{
     type:String,
@@ -31,5 +30,4 @@ const TitanKitchenSchema = new mongoose.Schema({
         required:'Login Required!!'
     }  
 });
-
 export default TitanKitchenSchema

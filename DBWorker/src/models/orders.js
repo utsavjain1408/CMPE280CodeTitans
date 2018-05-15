@@ -1,5 +1,4 @@
 import mongoose from 'mongoose';
-
 export const TitanOrderSchema = new mongoose.Schema({
   orderUID:{
     type:String,
@@ -53,7 +52,5 @@ export const TitanOrderSchema = new mongoose.Schema({
       type:String,
       enum:['placed','inprep', 'baking','packed','pickedup'],
       default:'placed'
-  }
-});
-
+    }});
 export default TitanOrderSchema
