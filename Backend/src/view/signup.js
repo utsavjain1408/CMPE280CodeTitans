@@ -54,7 +54,7 @@ function chBackcolor() {
  }
 
  function changepic(){
-	document.getElementById('myImage').src='http://localhost:3050/static/welcome.gif'
+	document.getElementById('myImage').src='http://35.194.50.254:3050/static/welcome.gif'
  }
 
 /*var btn = document.querySelectorAll('ul li a');
@@ -109,7 +109,7 @@ function ilovepizza() {
 	// var settings = {
 	// 	"async": true,
 	// 	"crossDomain": true,
-	// 	"url": "http://localhost:3000/user/"+document.getElementById("email").value,
+	// 	"url": "http://35.194.50.254:3000/user/"+document.getElementById("email").value,
 	// 	"method": "POST",
 	// 	"headers": {
 	// 	  "content-type": "application/x-www-form-urlencoded",
@@ -136,7 +136,7 @@ function ilovepizza() {
 }
 function deleteaccount(email){
 	// var settings = {
-	// 	"url": "http://localhost:3000/user/"+email,
+	// 	"url": "http://35.194.50.254:3000/user/"+email,
 	// 	"method": "DELETE",
 	// 	"headers": {
 	// 	  "content-type": "application/x-www-form-urlencoded",

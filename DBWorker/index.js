@@ -60,13 +60,13 @@ app.post('/place_order',(req, res)=>{
     TitanOrder.userID= String(email)
     TitanOrder.order=order
     TitanOrder.totalCost=totalCost
-   axios.post('http://localhost:3000/order/user/'+email, TitanOrder).then(res => {
+   axios.post('http://35.194.50.254:3000/order/user/'+email, TitanOrder).then(res => {
         console.log(res.data);
    }).catch(console.error);
     console.log("Total : "+totalCost);
     console.log("Email : "+email)
     console.log(TitanOrder.order)
-    res.redirect('http://localhost:3050/empty')
+    res.redirect('http://35.194.50.254:3050/empty')
 } )
 
 app.listen(PORT, () =>

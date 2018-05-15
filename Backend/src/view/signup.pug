@@ -6,10 +6,10 @@ block content
         include signup.css
     script(type='text/javascript').
       $(window).load(function(){
-        $("#home").attr("href","http://localhost:3050/");
+        $("#home").attr("href","http://35.194.50.254:3050/");
       });
     div
-        form(id = 'signupform' name='signupform' action='http://localhost:3000/user' method = 'post')
+        form(id = 'signupform' name='signupform' action='http://35.194.50.254:3000/user' method = 'post')
             #accordion-resizer
                 #accordion
                     h3#hidename Create an Account
@@ -102,5 +102,5 @@ block content
                     |  Accept our&nbsp
                     a#showTerms(href='#') Terms & Conditions    
                 br
-                a#cancel(href='http://localhost:3050/')  Cancel 
+                a#cancel(href='http://35.194.50.254:3050/')  Cancel 
                 button(type='submit', onclick='')  Create Account

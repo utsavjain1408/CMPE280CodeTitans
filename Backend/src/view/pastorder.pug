@@ -2,20 +2,20 @@ extends layout
 
 block content
     div(class="sidenav")
-        a(href='http://localhost:3050/home') Home
-        a(href='http://localhost:3050/pizza') Pizza options
-        a(href='http://localhost:3050/profile') Profile
-        a(href='http://localhost:3050/pastOrder') Past Orders
-        a(href='http://localhost:3050/contactUs') Contact Us
-        a(href='http://localhost:3050/logout') Log Out
+        a(href='http://35.194.50.254:3050/home') Home
+        a(href='http://35.194.50.254:3050/pizza') Pizza options
+        a(href='http://35.194.50.254:3050/profile') Profile
+        a(href='http://35.194.50.254:3050/pastOrder') Past Orders
+        a(href='http://35.194.50.254:3050/contactUs') Contact Us
+        a(href='http://35.194.50.254:3050/logout') Log Out
     style
             include signup.css
             //include layout.css
     div(class="main") 
         div(class="title") 
-            form(action='http://localhost:3000/past_order/utsav.jain@sjsu.edu', method='get')
+            form(action='http://35.194.50.254:3000/past_order/utsav.jain@sjsu.edu', method='get')
                 input(id = 'submitbtn', type='submit', name='View Order!', value='ViewOrder')
-            img(src=('http://localhost:3050/static/Welcome.jpg'))
+            img(src=('http://35.194.50.254:3050/static/Welcome.jpg'))
     //- div(ng-app='foobar')
     //-     div(ng-controller='bar')
     //-         | Response Data: {{data}} 
@@ -30,7 +30,7 @@ block content
     //-     var onError = function (data, status, headers, config) {
     //-     $scope.error = status;
     //-     }
-    //-     var promise = $http.get("http://localhost:3000/order/user/a/utsav.jain@sjsu.edu");
+    //-     var promise = $http.get("http://35.194.50.254:3000/order/user/a/utsav.jain@sjsu.edu");
     //-     promise.success(onSuccess);
     //-     promise.error(onError);
     //-     });

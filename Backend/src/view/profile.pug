@@ -2,18 +2,18 @@ extends layout
 
 block content
     div(class="sidenav")
-        a(href='http://localhost:3050/home') Home
-        a(href='http://localhost:3050/pizza') Pizza options
-        a(href='http://localhost:3050/profile') Profile
-        a(href='http://localhost:3050/pastOrder') Past Orders
-        a(href='http://localhost:3050/contactUs') Contact Us
-        a(href='http://localhost:3050/logout') Log Out
+        a(href='http://35.194.50.254:3050/home') Home
+        a(href='http://35.194.50.254:3050/pizza') Pizza options
+        a(href='http://35.194.50.254:3050/profile') Profile
+        a(href='http://35.194.50.254:3050/pastOrder') Past Orders
+        a(href='http://35.194.50.254:3050/contactUs') Contact Us
+        a(href='http://35.194.50.254:3050/logout') Log Out
     style
             include signup.css
             //include layout.css
     div(class="main") 
         div(class="title") PROFILE INFORMATION
-            form(id = 'signupform' action='http://localhost:3000/user/'+ user.email method = 'post')
+            form(id = 'signupform' action='http://35.194.50.254:3000/user/'+ user.email method = 'post')
                 table
                     tr
                         td
@@ -60,6 +60,6 @@ block content
                         td
                             input(name='address.zip', type='text', value=user.address.zip, pattern="[0-9]{5}")
                 button(type="submit") Update and Save
-        form(id = 'signupform' action='http://localhost:3000/user/delete/'+ user.email method = 'post')
+        form(id = 'signupform' action='http://35.194.50.254:3000/user/delete/'+ user.email method = 'post')
             button(type="submit",  onclick = "deleteaccount(\'"+user.email+"\')") Delete Account
             //script(type='text/javascript', src='static/signup.js')

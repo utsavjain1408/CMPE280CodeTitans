@@ -4,12 +4,12 @@ block content
     style
             include cart_styles.css 
     div(class="sidenav")
-        a(href='http://localhost:3050/home') Home
-        a(href='http://localhost:3050/pizza') Pizza options
-        a(href='http://localhost:3050/profile') Profile
-        a(href='http://localhost:3050/pastOrder') Past Orders
-        a(href='http://localhost:3050/contactUs') Contact Us
-        a(href='http://localhost:3050/logout') Log Out
+        a(href='http://35.194.50.254:3050/home') Home
+        a(href='http://35.194.50.254:3050/pizza') Pizza options
+        a(href='http://35.194.50.254:3050/profile') Profile
+        a(href='http://35.194.50.254:3050/pastOrder') Past Orders
+        a(href='http://35.194.50.254:3050/contactUs') Contact Us
+        a(href='http://35.194.50.254:3050/logout') Log Out
 
     if products.length >= 1 
         #w
@@ -36,7 +36,7 @@ block content
                             td
                                 span.remove
                                     a(href='/remove/'+ product.id)
-                                        img(src='http://localhost:3050/static/trash.png', alt='X')
+                                        img(src='http://35.194.50.254:3050/static/trash.png', alt='X')
                        
                             
                             
@@ -54,7 +54,7 @@ block content
                     // checkout btn
                     tr.checkoutrow
                         td.checkout(colspan='5')
-                            form(action='http://localhost:3000/place_order', method='post')
+                            form(action='http://35.194.50.254:3000/place_order', method='post')
                                 input#products(name='Products', type='hidden', value=products)
                                 input#totalPrice(name='totalPrice', type='hidden', value=totalPrice)
                                 //- input#some(name='some', type='hidden', value=user.email)

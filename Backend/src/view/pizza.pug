@@ -7,19 +7,19 @@ block content
     script(src="https://code.jquery.com/ui/1.12.1/jquery-ui.js")
     
     div(class="sidenav")
-        a(href='http://localhost:3050/home') Home
-        a(href='http://localhost:3050/pizza') Pizza options
-        a(href='http://localhost:3050/profile') Profile
-        a(href='http://localhost:3050/pastOrder') Past Orders
-        a(href='http://localhost:3050/contactUs') Contact Us
-        a(href='http://localhost:3050/logout') Log Out
+        a(href='http://35.194.50.254:3050/home') Home
+        a(href='http://35.194.50.254:3050/pizza') Pizza options
+        a(href='http://35.194.50.254:3050/profile') Profile
+        a(href='http://35.194.50.254:3050/pastOrder') Past Orders
+        a(href='http://35.194.50.254:3050/contactUs') Contact Us
+        a(href='http://35.194.50.254:3050/logout') Log Out
 
     #cart
-        a(href='http://localhost:3050/shopping_cart')
-            img(src='http://localhost:3050/static/cart.png', alt='X')
+        a(href='http://35.194.50.254:3050/shopping_cart')
+            img(src='http://35.194.50.254:3050/static/cart.png', alt='X')
 
     div(id='margheritapizzadialog', style='display:none') 
-        form(id = 'customDialogform' action='http://localhost:3050/shopping_cart' method = 'post')
+        form(id = 'customDialogform' action='http://35.194.50.254:3050/shopping_cart' method = 'post')
             div(id='customDialogDiv')
                 p Toppings : Tomato sauce, Mozzarella, Basil;
                 legend Choose a Size: 
@@ -29,7 +29,7 @@ block content
                 button(type="submit") Add To Cart
     
     div(id='greekgardenpizzadialog', style='display:none') 
-        form(id = 'customDialogform' action='http://localhost:3050/shopping_cart' method = 'post')
+        form(id = 'customDialogform' action='http://35.194.50.254:3050/shopping_cart' method = 'post')
             div(id='customDialogDiv')
                 p Toppings: Garlic sauce,Tomatoes,Spinach,Black olives,Feta cheese, Mozzarella,Provolone cheese
                 legend Choose a Size: 
@@ -39,7 +39,7 @@ block content
                 button(type="submit") Add To Cart
     
     div(id='familyfavoritepizzadialog', style='display:none') 
-        form(id = 'customDialogform' action='http://localhost:3050/shopping_cart' method = 'post')
+        form(id = 'customDialogform' action='http://35.194.50.254:3050/shopping_cart' method = 'post')
             div(id='customDialogDiv')
                 p Toppings : Red sauce, Pepperoni, Mushrooms, Tomatoes, Onion, Monterey jack, Mozzarella
                 legend Choose a Size: 
@@ -49,7 +49,7 @@ block content
                 button(type="submit") Add To Cart
     
     div(id='signaturepizzadialog', style='display:none') 
-        form(id = 'customDialogform' action='http://localhost:3050/shopping_cart' method = 'post')
+        form(id = 'customDialogform' action='http://35.194.50.254:3050/shopping_cart' method = 'post')
             div(id='customDialogDiv')
                 p Toppings: Pesto sauce, Tomatoes, Spinach, Red onion, Green peppers, Banana peppers, Bacon, Mozarella
                 legend Choose a Size: 
@@ -59,7 +59,7 @@ block content
                 button(type="submit") Add To Cart
        
     div(id='customDialog', style='display:none') Make your Custom Pizza 
-        form(id = 'customDialogform' action='http://localhost:3050/customize_shopping_cart' method = 'post')
+        form(id = 'customDialogform' action='http://35.194.50.254:3050/customize_shopping_cart' method = 'post')
             div(id='customDialogDiv')
                 legend Sauce: 
                 input#sauce(type='radio', name='sauce' value="Light")
@@ -119,16 +119,16 @@ block content
         ul(id="selectable")
             
             li(class="ui-widget-content", id='1') 
-                img(src='http://localhost:3050/static/Margherita.png') 
+                img(src='http://35.194.50.254:3050/static/Margherita.png') 
                 p(class="pizzaDescription") Margherita
             li(class="ui-widget-content", id='2') 
-                img(src='http://localhost:3050/static/Greek_Garden.png') 
+                img(src='http://35.194.50.254:3050/static/Greek_Garden.png') 
                 p(class="pizzaDescription") Greek Garden
             li(class="ui-widget-content", id='3') 
-                img(src='http://localhost:3050/static/Family_favorite.png') 
+                img(src='http://35.194.50.254:3050/static/Family_favorite.png') 
                 p(class="pizzaDescription") Family Favorite
             li(class="ui-widget-content", id='4')
-                img(src='http://localhost:3050/static/Signature_Titan.png') 
+                img(src='http://35.194.50.254:3050/static/Signature_Titan.png') 
                 p(class="pizzaDescription") Signature - Code Titan
 
         ul(id="customSelectable")

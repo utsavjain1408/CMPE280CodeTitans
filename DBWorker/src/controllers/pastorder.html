@@ -277,19 +277,19 @@ ul#customSelectable li {
     </head>
         <body>
                 <div class="logo">
-                    <a id="home" href="http://localhost:3050/home"> 
-                        <table class="main"><tr><td><img src="http://localhost:3050/static/pizzaLogo.png">
+                    <a id="home" href="http://35.194.50.254:3050/home"> 
+                        <table class="main"><tr><td><img src="http://35.194.50.254:3050/static/pizzaLogo.png">
                     </td>
                     <td><h1 class="header">Titan Pizza </h1></td></tr></table>
                     </a>
                     </div>
                     <br><br><div class="sidenav">
-                        <a href="http://localhost:3050/home">Home</a>
-                        <a href="http://localhost:3050/pizza">Pizza options</a>
-                        <a href="http://localhost:3050/profile">Profile</a>
-                        <a href="http://localhost:3050/pastOrder">Past Orders</a>
-                        <a href="http://localhost:3050/contactUs">Contact Us</a>
-                        <a href="http://localhost:3050/logout">Log Out</a>
+                        <a href="http://35.194.50.254:3050/home">Home</a>
+                        <a href="http://35.194.50.254:3050/pizza">Pizza options</a>
+                        <a href="http://35.194.50.254:3050/profile">Profile</a>
+                        <a href="http://35.194.50.254:3050/pastOrder">Past Orders</a>
+                        <a href="http://35.194.50.254:3050/contactUs">Contact Us</a>
+                        <a href="http://35.194.50.254:3050/logout">Log Out</a>
                         </div>
                         <style>/* Style inputs with type, select elements and textareas */
 input{
@@ -516,7 +516,7 @@ ol{display: none;}
 <script>
 var app = angular.module('pastorder', []);
 app.controller('past', function($scope, $http) {
-  $http.get("http://localhost:3000/order/user/a/utsav.jain@sjsu.edu")
+  $http.get("http://35.194.50.254:3000/order/user/a/utsav.jain@sjsu.edu")
   .then(function(response) {
       $scope.orders = response.data;
       $scope.items = $scope.orders.items;
@@ -527,4 +527,4 @@ app.controller('past', function($scope, $http) {
   });
 });
 </script>
-<br><br><div><footer class="main"> <p>Copyright Info: We don't own ANY  copyrights</p><p> <a href="http://localhost:3050/about">About Us</a></p><p> <a href="http://localhost:3050/career">Career</a></p></footer></div><script type="text/javascript" src="http://localhost:3050/static/signup.js"></script></body></html>
+<br><br><div><footer class="main"> <p>Copyright Info: We don't own ANY  copyrights</p><p> <a href="http://35.194.50.254:3050/about">About Us</a></p><p> <a href="http://35.194.50.254:3050/career">Career</a></p></footer></div><script type="text/javascript" src="http://35.194.50.254:3050/static/signup.js"></script></body></html>

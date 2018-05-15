@@ -12,7 +12,7 @@ export const createNewUser = (req,res) =>{
     if(err){
       res.send(err);
     }
-    res.redirect('http://localhost:3050');
+    res.redirect('http://35.194.50.254:3050');
   });
 };
 
@@ -35,7 +35,7 @@ export const updateUserInfo = (req,res) =>{
           res.send(err);
         }
         // res.json(user);
-        res.redirect('http://localhost:3050/profile');
+        res.redirect('http://35.194.50.254:3050/profile');
       });
 }
 export const deleteUser = (req,res) =>{
@@ -44,7 +44,7 @@ export const deleteUser = (req,res) =>{
         if(err){
             res.send(err);
         }
-        res.redirect('http://localhost:3050');
+        res.redirect('http://35.194.50.254:3050');
     });
 }
 export const getAllUsers = (req,res) =>{
