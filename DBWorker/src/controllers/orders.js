@@ -6,6 +6,8 @@ const order = mongoose.model('OrderModel', TitanOrderSchema)
 
 export const getAllOrders = (req,res) =>{
     console.log(`getAllOrders called`)
+    res.header("Access-Control-Allow-Origin", "http://localhost:8000");
+    res.header("Access-Control-Allow-Headers");
     order.find({}, (err, order) => {
         if(err){
           res.send(err);
