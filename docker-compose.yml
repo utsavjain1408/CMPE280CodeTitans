@@ -2,12 +2,12 @@ version: '3'
 services: 
   backend: 
     image: utsavjain/titanbackend
-    port:
+    ports:
       - "3050:3050"
     depends_on:
       - dbworker
   dbworker:
     image: utsavjain/titandbworker
-    port:
+    ports:
       - "3000:3000"
     
